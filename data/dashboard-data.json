@@ -1,115 +1,124 @@
 {
-  "lastUpdated": "2026-03-18T10:45:00+08:00",
+  "lastUpdated": "2026-03-18T13:10:00+08:00",
   "actionRequired": [
     {
-      "title": "7 个 Cron 作业状态为 error，需要检查",
-      "url": "",
-      "priority": "high"
-    },
-    {
-      "title": "检查 agent-role-orchestrator 仓库是否泄露敏感信息",
-      "url": "https://github.com/robertsong2019/agent-role-orchestrator",
+      "title": "重新生成泄露的 Tavily API Key",
+      "url": "https://tavily.com/",
       "priority": "high"
     }
   ],
-  "activeNow": [
-    {
-      "task": "配置 GitHub Pages 仪表板",
-      "model": "zai/glm-5",
-      "startedAt": "2026-03-18T10:45:00+08:00"
-    }
-  ],
+  "activeNow": [],
   "products": [
     {
       "name": "个人主页",
       "url": "https://robertsong2019.github.io/",
       "status": "live",
-      "lastChecked": "2026-03-18T10:45:00+08:00"
+      "lastChecked": "2026-03-18T13:10:00+08:00"
     },
     {
       "name": "jp - JSON 路径查询工具",
       "url": "https://github.com/robertsong2019/jp",
       "status": "live",
-      "lastChecked": "2026-03-18T10:45:00+08:00"
+      "lastChecked": "2026-03-18T13:10:00+08:00"
     },
     {
       "name": "code-poetry-generator",
       "url": "https://github.com/robertsong2019/code-poetry-generator",
       "status": "live",
-      "lastChecked": "2026-03-18T10:45:00+08:00"
+      "lastChecked": "2026-03-18T13:10:00+08:00"
     },
     {
       "name": "agent-role-orchestrator",
       "url": "https://github.com/robertsong2019/agent-role-orchestrator",
-      "status": "testing",
-      "lastChecked": "2026-03-18T10:45:00+08:00"
+      "status": "live",
+      "lastChecked": "2026-03-18T13:10:00+08:00"
     },
     {
       "name": "mission-control",
-      "url": "https://github.com/robertsong2019/mission-control",
-      "status": "testing",
-      "lastChecked": "2026-03-18T10:45:00+08:00"
+      "url": "https://robertsong2019.github.io/mission-control/",
+      "status": "live",
+      "lastChecked": "2026-03-18T13:10:00+08:00"
     }
   ],
   "crons": [
     {
       "name": "github-creative-night",
       "schedule": "00:00 每天凌晨",
-      "lastRun": "10h ago",
-      "status": "error",
-      "errors": 1,
-      "lastError": "任务执行失败"
+      "lastRun": "13h ago",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "deep-exploration-night",
       "schedule": "01:00 每天凌晨",
-      "lastRun": "9h ago",
-      "status": "error",
-      "errors": 1,
-      "lastError": "任务执行失败"
+      "lastRun": "12h ago",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "code-lab-night",
       "schedule": "02:00 每天凌晨",
-      "lastRun": "8h ago",
-      "status": "error",
-      "errors": 1,
-      "lastError": "任务执行失败"
+      "lastRun": "11h ago",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "tool-development-night",
       "schedule": "03:00 每天凌晨",
-      "lastRun": "7h ago",
-      "status": "error",
-      "errors": 1,
-      "lastError": "任务执行失败"
+      "lastRun": "10h ago",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "knowledge-organization-night",
       "schedule": "05:00 每天凌晨",
-      "lastRun": "5h ago",
-      "status": "error",
-      "errors": 1,
-      "lastError": "任务执行失败"
+      "lastRun": "8h ago",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "project-testing-night",
       "schedule": "06:00 每天凌晨",
-      "lastRun": "4h ago",
-      "status": "error",
-      "errors": 1,
-      "lastError": "任务执行失败"
+      "lastRun": "7h ago",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "documentation-night",
       "schedule": "07:00 每天凌晨",
-      "lastRun": "3h ago",
-      "status": "error",
-      "errors": 1,
-      "lastError": "任务执行失败"
+      "lastRun": "6h ago",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     }
   ],
   "recentActivity": [
+    {
+      "time": "2026-03-18T13:10:00+08:00",
+      "event": "✅ 更新 Mission Control 仪表板数据"
+    },
+    {
+      "time": "2026-03-18T11:35:00+08:00",
+      "event": "🔧 修复 Cron 作业通道配置"
+    },
+    {
+      "time": "2026-03-18T11:10:00+08:00",
+      "event": "🧹 清理 agent-role-orchestrator 仓库"
+    },
+    {
+      "time": "2026-03-18T10:56:00+08:00",
+      "event": "🔒 清理 Git 历史中的敏感信息"
+    },
+    {
+      "time": "2026-03-18T10:50:00+08:00",
+      "event": "🔐 配置全局 .gitignore 和安全指南"
+    },
     {
       "time": "2026-03-18T10:45:00+08:00",
       "event": "🔧 配置 GitHub Pages 仪表板"
@@ -117,22 +126,6 @@
     {
       "time": "2026-03-18T10:12:00+08:00",
       "event": "✅ 安装 agent-dashboard 技能"
-    },
-    {
-      "time": "2026-03-18T09:17:00+08:00",
-      "event": "🔍 搜索 skillhub 热门技能"
-    },
-    {
-      "time": "2026-03-18T09:08:00+08:00",
-      "event": "📄 创建飞书文档《skillhub 安装指南》"
-    },
-    {
-      "time": "2026-03-18T07:35:00+08:00",
-      "event": "✅ 完善项目文档和生成技术随笔"
-    },
-    {
-      "time": "2026-03-18T06:00:00+08:00",
-      "event": "✅ 运行 OpenClaw WeCom Extension 测试（66/66 通过）"
     }
   ]
 }
