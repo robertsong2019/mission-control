@@ -1,17 +1,17 @@
 {
-  "lastUpdated": "2026-03-21T22:00:00Z",
+  "lastUpdated": "2026-03-22T22:00:00Z",
   "actionRequired": [
     {
-      "title": "11 cron jobs have errors - need investigation",
+      "title": "project-testing-morning cron job has error status",
       "url": null,
-      "priority": "high"
+      "priority": "medium"
     }
   ],
   "activeNow": [
     {
       "task": "Dashboard morning update (cron)",
       "model": "glm-5",
-      "startedAt": "2026-03-21T22:00:00Z"
+      "startedAt": "2026-03-22T22:00:00Z"
     }
   ],
   "products": [],
@@ -19,7 +19,7 @@
     {
       "name": "dashboard-update-morning",
       "schedule": "6:00 AM daily",
-      "lastRun": "2026-03-21T22:00:00Z",
+      "lastRun": "2026-03-22T22:00:00Z",
       "status": "running",
       "errors": 0,
       "lastError": null
@@ -27,71 +27,71 @@
     {
       "name": "github-creative-evening",
       "schedule": "7:00 PM daily",
-      "lastRun": "2026-03-21T11:00:00Z",
-      "status": "error",
-      "errors": 1,
-      "lastError": "Unknown error"
+      "lastRun": "2026-03-22T11:00:00Z",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "deep-exploration-evening",
       "schedule": "8:00 PM daily",
-      "lastRun": "2026-03-21T12:00:00Z",
-      "status": "error",
-      "errors": 1,
-      "lastError": "Unknown error"
+      "lastRun": "2026-03-22T12:00:00Z",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "code-lab-evening",
       "schedule": "9:00 PM daily",
-      "lastRun": "2026-03-21T13:00:00Z",
-      "status": "error",
-      "errors": 1,
-      "lastError": "Unknown error"
+      "lastRun": "2026-03-22T13:00:00Z",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "tool-development-evening",
       "schedule": "10:00 PM daily",
-      "lastRun": "2026-03-21T14:00:00Z",
-      "status": "error",
-      "errors": 1,
-      "lastError": "Unknown error"
+      "lastRun": "2026-03-22T14:00:00Z",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "key-development-1",
       "schedule": "11:00 PM daily",
-      "lastRun": "2026-03-21T15:00:00Z",
-      "status": "error",
-      "errors": 1,
-      "lastError": "Unknown error"
+      "lastRun": "2026-03-22T15:00:00Z",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "key-development-2",
       "schedule": "12:00 AM daily",
-      "lastRun": "2026-03-21T16:00:00Z",
-      "status": "error",
-      "errors": 1,
-      "lastError": "Unknown error"
+      "lastRun": "2026-03-22T16:00:00Z",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "key-development-3",
       "schedule": "1:00 AM daily",
-      "lastRun": "2026-03-21T17:00:00Z",
-      "status": "error",
-      "errors": 1,
-      "lastError": "Unknown error"
+      "lastRun": "2026-03-22T17:00:00Z",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "knowledge-organization-morning",
       "schedule": "2:00 AM daily",
-      "lastRun": "2026-03-21T18:00:00Z",
-      "status": "error",
-      "errors": 1,
-      "lastError": "Unknown error"
+      "lastRun": "2026-03-22T18:00:00Z",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "project-testing-morning",
       "schedule": "3:00 AM daily",
-      "lastRun": "2026-03-21T19:00:00Z",
+      "lastRun": "2026-03-22T19:00:00Z",
       "status": "error",
       "errors": 1,
       "lastError": "Unknown error"
@@ -99,31 +99,48 @@
     {
       "name": "documentation-morning",
       "schedule": "4:00 AM daily",
-      "lastRun": "2026-03-21T20:00:00Z",
-      "status": "error",
-      "errors": 1,
-      "lastError": "Unknown error"
+      "lastRun": "2026-03-22T20:00:00Z",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     },
     {
       "name": "essay-generation-morning",
       "schedule": "5:00 AM daily",
-      "lastRun": "2026-03-21T21:00:00Z",
-      "status": "error",
-      "errors": 1,
-      "lastError": "Unknown error"
+      "lastRun": "2026-03-22T21:00:00Z",
+      "status": "ok",
+      "errors": 0,
+      "lastError": null
     }
   ],
   "recentActivity": [
     {
-      "time": "2026-03-21T22:00:00Z",
+      "time": "2026-03-22T22:00:00Z",
       "event": "📊 Mission Control dashboard updated"
+    },
+    {
+      "time": "2026-03-22T21:00:00Z",
+      "event": "📝 essay-generation-morning completed"
+    },
+    {
+      "time": "2026-03-22T20:00:00Z",
+      "event": "📚 documentation-morning completed"
+    },
+    {
+      "time": "2026-03-22T19:00:00Z",
+      "event": "⚠️ project-testing-morning failed"
+    },
+    {
+      "time": "2026-03-22T18:00:00Z",
+      "event": "🗂️ knowledge-organization-morning completed"
     }
   ],
   "stats": {
     "totalCronJobs": 12,
-    "healthyCrons": 1,
-    "errorCrons": 11,
-    "totalSessions": 1,
-    "activeSessions": 1
+    "healthyCrons": 10,
+    "errorCrons": 1,
+    "runningCrons": 1,
+    "totalSessions": 37,
+    "activeSessions": 3
   }
 }
