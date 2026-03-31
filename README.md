@@ -2,11 +2,36 @@
 
 Real-time dashboard for monitoring OpenClaw agent activities, cron jobs, and recent activity.
 
+**零依赖 · 单文件 · 开箱即用** — 只需一个 `index.html` 和一个 JSON 数据文件。
+
 ## 🌐 Live Demo
 
 **Dashboard URL**: https://robertsong2019.github.io/mission-control/
 
 **PIN**: `1234` (change this in index.html)
+
+## ✨ 功能一览
+
+| 功能 | 说明 |
+|------|------|
+| 📋 行动项 | 优先级排序的待办事项（高/中/低） |
+| ⚡ 活跃任务 | 实时监控运行中的 Agent 会话 |
+| 💊 产品健康 | 服务状态与可用性 |
+| ⏰ Cron 监控 | 定时任务状态与错误追踪 |
+| 📜 活动时间线 | 最近操作记录 |
+| 🔐 PIN 保护 | 轻量级访问控制 |
+| 📱 响应式 | 移动端自适应 |
+
+## 🏗️ 架构
+
+```
+mission-control/
+├── index.html                  # 单文件应用（HTML + CSS + JS）
+└── data/
+    └── dashboard-data.json     # 仪表板数据
+```
+
+**设计理念：** 纯前端、零构建、零依赖。数据通过 JSON 文件注入，页面每 30 秒自动刷新。
 
 ## 📋 Setup Instructions
 
@@ -100,6 +125,11 @@ To manually update the dashboard:
    git commit -m "Update dashboard data"
    git push
    ```
+
+## 📖 文档
+
+- **[教程](TUTORIAL.md)** — 从零部署，理解数据格式，配置自动更新
+- **[贡献指南](CONTRIBUTING.md)** — 参与开发，代码规范，架构说明
 
 ## 📚 Related
 
