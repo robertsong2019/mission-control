@@ -1,140 +1,36 @@
 {
-  "lastUpdated": "2026-04-13T06:00:00+08:00",
-  "generatedAt": "2026-04-12T22:00:00Z",
-  "cronJobs": {
-    "total": 14,
-    "enabled": 14,
-    "jobs": [
-      {
-        "name": "dashboard-update-morning",
-        "schedule": "0 6 * * *",
-        "status": "running",
-        "lastRun": "2026-04-13T06:00:00+08:00",
-        "lastDuration": null,
-        "consecutiveErrors": 0
-      },
-      {
-        "name": "github-trending-daily",
-        "schedule": "0 7 * * * (Asia/Shanghai)",
-        "status": "error",
-        "lastRun": "2026-04-12T07:00:00+08:00",
-        "lastDuration": "41s",
-        "consecutiveErrors": 4,
-        "lastError": "Channel is required when multiple channels are configured"
-      },
-      {
-        "name": "github-creative-evening",
-        "schedule": "0 19 * * *",
-        "status": "ok",
-        "lastRun": "2026-04-12T19:00:00+08:00",
-        "lastDuration": "2m18s",
-        "consecutiveErrors": 0
-      },
-      {
-        "name": "deep-exploration-evening",
-        "schedule": "0 20 * * *",
-        "status": "ok",
-        "lastRun": "2026-04-12T20:00:00+08:00",
-        "lastDuration": "9m36s",
-        "consecutiveErrors": 0
-      },
-      {
-        "name": "deep-exploration-evening (UTC)",
-        "schedule": "0 12 * * * (UTC)",
-        "status": "ok",
-        "lastRun": "2026-04-12T12:00:00Z",
-        "lastDuration": "3m30s",
-        "consecutiveErrors": 0
-      },
-      {
-        "name": "code-lab-evening",
-        "schedule": "0 21 * * *",
-        "status": "ok",
-        "lastRun": "2026-04-12T21:00:00+08:00",
-        "lastDuration": "9m43s",
-        "consecutiveErrors": 0
-      },
-      {
-        "name": "tool-development-evening",
-        "schedule": "0 22 * * *",
-        "status": "error",
-        "lastRun": "2026-04-12T22:00:00+08:00",
-        "lastDuration": "10m47s",
-        "consecutiveErrors": 2,
-        "lastError": "All models failed: rate_limit + timeout"
-      },
-      {
-        "name": "key-development-1",
-        "schedule": "0 23 * * *",
-        "status": "ok",
-        "lastRun": "2026-04-12T23:00:00+08:00",
-        "lastDuration": "8m5s",
-        "consecutiveErrors": 0
-      },
-      {
-        "name": "key-development-2",
-        "schedule": "0 0 * * *",
-        "status": "ok",
-        "lastRun": "2026-04-13T00:00:00+08:00",
-        "lastDuration": "20m17s",
-        "consecutiveErrors": 0
-      },
-      {
-        "name": "key-development-3",
-        "schedule": "0 1 * * *",
-        "status": "ok",
-        "lastRun": "2026-04-13T01:00:00+08:00",
-        "lastDuration": "51s",
-        "consecutiveErrors": 0
-      },
-      {
-        "name": "knowledge-organization-morning",
-        "schedule": "0 2 * * *",
-        "status": "ok",
-        "lastRun": "2026-04-13T02:00:00+08:00",
-        "lastDuration": "1m48s",
-        "consecutiveErrors": 0
-      },
-      {
-        "name": "project-testing-morning",
-        "schedule": "0 3 * * *",
-        "status": "ok",
-        "lastRun": "2026-04-13T03:00:00+08:00",
-        "lastDuration": "1m38s",
-        "consecutiveErrors": 0
-      },
-      {
-        "name": "documentation-morning",
-        "schedule": "0 4 * * *",
-        "status": "ok",
-        "lastRun": "2026-04-13T04:00:00+08:00",
-        "lastDuration": "3m20s",
-        "consecutiveErrors": 0
-      },
-      {
-        "name": "essay-generation-morning",
-        "schedule": "0 5 * * *",
-        "status": "ok",
-        "lastRun": "2026-04-13T05:00:00+08:00",
-        "lastDuration": "2m49s",
-        "consecutiveErrors": 0
-      }
+  "lastUpdated": "2026-04-15T22:00:00Z",
+  "generatedAt": "2026-04-16 06:00 CST",
+  "actionRequired": [
+    "tool-development-evening: 1 consecutive error — edit failed in agent-task-cli/features.md",
+    "key-development-3: 1 consecutive error — all models timed out (glm-5.1 + glm-4.7)"
+  ],
+  "activeNow": [
+    { "job": "dashboard-update-morning", "status": "running" }
+  ],
+  "crons": [
+    { "name": "dashboard-update-morning", "schedule": "6:00 AM daily", "lastRun": "2026-04-15T22:00:00Z", "status": "running", "duration": null, "errors": 0 },
+    { "name": "essay-generation-morning", "schedule": "5:00 AM daily", "lastRun": "2026-04-15T21:00:00Z", "status": "ok", "duration": "2.8min", "errors": 0 },
+    { "name": "documentation-morning", "schedule": "4:00 AM daily", "lastRun": "2026-04-15T20:00:00Z", "status": "ok", "duration": "2.2min", "errors": 0 },
+    { "name": "project-testing-morning", "schedule": "3:00 AM daily", "lastRun": "2026-04-15T19:00:00Z", "status": "ok", "duration": "2.5min", "errors": 0 },
+    { "name": "knowledge-organization-morning", "schedule": "2:00 AM daily", "lastRun": "2026-04-15T18:00:00Z", "status": "ok", "duration": "2.1min", "errors": 0 },
+    { "name": "key-development-3", "schedule": "1:00 AM daily", "lastRun": "2026-04-15T17:00:00Z", "status": "error", "duration": "22.3min", "errors": 1, "errorDetail": "All models timed out (glm-5.1 + glm-4.7)" },
+    { "name": "key-development-2", "schedule": "12:00 AM daily", "lastRun": "2026-04-15T16:00:00Z", "status": "ok", "duration": "12.2min", "errors": 0 },
+    { "name": "key-development-1", "schedule": "11:00 PM daily", "lastRun": "2026-04-15T15:00:00Z", "status": "ok", "duration": "10.1min", "errors": 0 },
+    { "name": "tool-development-evening", "schedule": "10:00 PM daily", "lastRun": "2026-04-15T14:00:00Z", "status": "error", "duration": "9.4min", "errors": 1, "errorDetail": "Edit failed in agent-task-cli/features.md" },
+    { "name": "code-lab-evening", "schedule": "9:00 PM daily", "lastRun": "2026-04-15T13:00:00Z", "status": "ok", "duration": "12.3min", "errors": 0 },
+    { "name": "deep-exploration-evening", "schedule": "8:00 PM daily (×2)", "lastRun": "2026-04-15T12:00:00Z", "status": "ok", "duration": "10.5min", "errors": 0 },
+    { "name": "github-creative-evening", "schedule": "7:00 PM daily", "lastRun": "2026-04-15T11:00:00Z", "status": "ok", "duration": "0.8min", "errors": 0 },
+    { "name": "github-trending-daily", "schedule": "7:00 AM daily", "lastRun": "2026-04-14T23:00:00Z", "status": "ok", "duration": "0.8min", "errors": 0 }
+  ],
+  "summary": {
+    "totalCronJobs": 14,
+    "enabledJobs": 14,
+    "allHealthy": false,
+    "consecutiveErrors": 2,
+    "issues": [
+      "tool-development-evening: 1 error — edit failed in features.md",
+      "key-development-3: 1 error — LLM timeout on both models"
     ]
-  },
-  "sessions": {
-    "active": 1,
-    "current": "dashboard-update-morning"
-  },
-  "alerts": [
-    {
-      "level": "error",
-      "job": "github-trending-daily",
-      "message": "4 consecutive errors — delivery channel not configured"
-    },
-    {
-      "level": "error",
-      "job": "tool-development-evening",
-      "message": "2 consecutive errors — API rate limit / model timeout"
-    }
-  ]
+  }
 }
