@@ -1,16 +1,19 @@
 {
-  "lastUpdated": "2026-06-22T22:00:00Z",
-  "generatedAt": "2026-06-23 06:00 CST",
-  "actionRequired": [
-    {
-      "level": "warn",
-      "message": "key-development-2 cron job returned error on last run (6h ago). Check logs."
-    }
-  ],
+  "lastUpdated": "2026-07-14T22:00:00Z",
+  "generatedAt": "2026-07-15 06:00 CST",
   "activeNow": [
     {
       "job": "dashboard-update-morning",
-      "status": "running"
+      "status": "running",
+      "model": "glm-5.1"
+    }
+  ],
+  "actionRequired": [
+    {
+      "job": "deep-exploration-evening",
+      "id": "a4bf5e2a",
+      "issue": "Last run ended with error",
+      "lastRun": "2026-07-14T12:00:00Z"
     }
   ],
   "crons": [
@@ -18,7 +21,8 @@
       "name": "dashboard-update-morning",
       "schedule": "6:00 AM daily",
       "id": "f38e0365",
-      "lastRun": "2026-06-22T22:00:00Z",
+      "lastRun": "2026-07-14T22:00:00Z",
+      "nextRun": "2026-07-15T22:00:00Z",
       "status": "running",
       "errors": 0
     },
@@ -26,7 +30,8 @@
       "name": "github-trending-daily",
       "schedule": "7:00 AM daily",
       "id": "9b2a8701",
-      "lastRun": "2026-06-21T23:00:00Z",
+      "lastRun": "2026-07-13T23:00:00Z",
+      "nextRun": "2026-07-14T23:00:00Z",
       "status": "ok",
       "errors": 0
     },
@@ -34,31 +39,44 @@
       "name": "github-trending-deep",
       "schedule": "8:00 AM daily",
       "id": "2c714952",
-      "lastRun": "2026-06-22T00:00:00Z",
+      "lastRun": "2026-07-14T00:00:00Z",
+      "nextRun": "2026-07-15T00:00:00Z",
       "status": "ok",
       "errors": 0
     },
     {
       "name": "github-creative-evening",
       "schedule": "7:00 PM daily",
-      "id": "610a8d6d",
-      "lastRun": "2026-06-22T11:00:00Z",
+      "id": "265091b6",
+      "lastRun": "2026-07-14T11:00:00Z",
+      "nextRun": "2026-07-15T11:00:00Z",
       "status": "ok",
       "errors": 0
     },
     {
       "name": "deep-exploration-evening",
-      "schedule": "8:00 PM daily (x2)",
-      "id": "265091b6",
-      "lastRun": "2026-06-22T12:00:00Z",
+      "schedule": "8:00 PM daily",
+      "id": "bb46cb70",
+      "lastRun": "2026-07-14T12:00:00Z",
+      "nextRun": "2026-07-15T12:00:00Z",
       "status": "ok",
       "errors": 0
+    },
+    {
+      "name": "deep-exploration-evening (tz-aware)",
+      "schedule": "8:00 PM daily",
+      "id": "a4bf5e2a",
+      "lastRun": "2026-07-14T12:00:00Z",
+      "nextRun": "2026-07-15T12:00:00Z",
+      "status": "error",
+      "errors": 1
     },
     {
       "name": "code-lab-evening",
       "schedule": "9:00 PM daily",
       "id": "13a2f284",
-      "lastRun": "2026-06-22T13:00:00Z",
+      "lastRun": "2026-07-14T13:00:00Z",
+      "nextRun": "2026-07-15T13:00:00Z",
       "status": "ok",
       "errors": 0
     },
@@ -66,7 +84,8 @@
       "name": "tool-development-evening",
       "schedule": "10:00 PM daily",
       "id": "ce2fb615",
-      "lastRun": "2026-06-22T14:00:00Z",
+      "lastRun": "2026-07-14T14:00:00Z",
+      "nextRun": "2026-07-15T14:00:00Z",
       "status": "ok",
       "errors": 0
     },
@@ -74,7 +93,8 @@
       "name": "key-development-1",
       "schedule": "11:00 PM daily",
       "id": "78eac6fc",
-      "lastRun": "2026-06-22T15:00:00Z",
+      "lastRun": "2026-07-14T15:00:00Z",
+      "nextRun": "2026-07-15T15:00:00Z",
       "status": "ok",
       "errors": 0
     },
@@ -82,15 +102,17 @@
       "name": "key-development-2",
       "schedule": "12:00 AM daily",
       "id": "88679f9e",
-      "lastRun": "2026-06-22T16:00:00Z",
-      "status": "error",
-      "errors": 1
+      "lastRun": "2026-07-14T16:00:00Z",
+      "nextRun": "2026-07-15T16:00:00Z",
+      "status": "ok",
+      "errors": 0
     },
     {
       "name": "key-development-3",
       "schedule": "1:00 AM daily",
       "id": "b0fd7e8d",
-      "lastRun": "2026-06-22T17:00:00Z",
+      "lastRun": "2026-07-14T17:00:00Z",
+      "nextRun": "2026-07-15T17:00:00Z",
       "status": "ok",
       "errors": 0
     },
@@ -98,7 +120,8 @@
       "name": "knowledge-organization",
       "schedule": "2:00 AM daily",
       "id": "fd0515b0",
-      "lastRun": "2026-06-22T18:00:00Z",
+      "lastRun": "2026-07-14T18:00:00Z",
+      "nextRun": "2026-07-15T18:00:00Z",
       "status": "ok",
       "errors": 0
     },
@@ -106,7 +129,8 @@
       "name": "project-testing-morning",
       "schedule": "3:00 AM daily",
       "id": "f7510f1f",
-      "lastRun": "2026-06-22T19:00:00Z",
+      "lastRun": "2026-07-14T19:00:00Z",
+      "nextRun": "2026-07-15T19:00:00Z",
       "status": "ok",
       "errors": 0
     },
@@ -114,7 +138,8 @@
       "name": "documentation-morning",
       "schedule": "4:00 AM daily",
       "id": "77a5bcc6",
-      "lastRun": "2026-06-22T20:00:00Z",
+      "lastRun": "2026-07-14T20:00:00Z",
+      "nextRun": "2026-07-15T20:00:00Z",
       "status": "ok",
       "errors": 0
     },
@@ -122,90 +147,34 @@
       "name": "essay-generation-morning",
       "schedule": "5:00 AM daily",
       "id": "686ec55c",
-      "lastRun": "2026-06-22T21:00:00Z",
+      "lastRun": "2026-07-14T21:00:00Z",
+      "nextRun": "2026-07-15T21:00:00Z",
       "status": "ok",
       "errors": 0
     }
   ],
   "sessions": {
-    "totalSessions": 45,
-    "activeInLast24h": 28,
-    "recentSessions": [
-      {
-        "key": "cron:dashboard-update-morning",
-        "age": "0.0h",
-        "model": "glm-5.1",
-        "ctxPercent": 17,
-        "kind": "cron"
-      },
-      {
-        "key": "main",
-        "age": "0.2h",
-        "model": "glm-5.1",
-        "ctxPercent": 35,
-        "kind": "direct"
-      },
-      {
-        "key": "cron:essay-generation-morning",
-        "age": "1.0h",
-        "model": "glm-5.1",
-        "ctxPercent": 26,
-        "kind": "cron"
-      },
-      {
-        "key": "cron:documentation-morning",
-        "age": "2.0h",
-        "model": "glm-5.1",
-        "ctxPercent": 24,
-        "kind": "cron"
-      },
-      {
-        "key": "cron:project-testing-morning",
-        "age": "3.0h",
-        "model": "glm-5.1",
-        "ctxPercent": 22,
-        "kind": "cron"
-      },
-      {
-        "key": "cron:knowledge-organization",
-        "age": "4.0h",
-        "model": "glm-5.1",
-        "ctxPercent": 27,
-        "kind": "cron"
-      },
-      {
-        "key": "cron:key-development-3",
-        "age": "5.0h",
-        "model": "glm-5.1",
-        "ctxPercent": 26,
-        "kind": "cron"
-      },
-      {
-        "key": "cron:key-development-2",
-        "age": "6.0h",
-        "model": "glm-5.1",
-        "ctxPercent": 36,
-        "kind": "cron"
-      }
+    "total": 16,
+    "model": "glm-5.1",
+    "recentCronSessions": 2,
+    "feishuSession": "39h ago",
+    "wecomSession": "106d ago",
+    "staleSessions": 10,
+    "details": [
+      { "type": "cron", "lastActive": "23h ago", "model": "glm-5.1", "tokens": "26k/205k (13%)" },
+      { "type": "cron", "lastActive": "24h ago", "model": "glm-5.1", "tokens": "31k/205k (15%)" },
+      { "type": "feishu", "lastActive": "39h ago", "model": "glm-5-turbo", "tokens": "55k/205k (27%)" },
+      { "type": "subagent", "lastActive": "11d ago", "model": "glm-5.1", "tokens": "35k/205k (17%)" },
+      { "type": "subagent", "lastActive": "61d ago", "model": "glm-5", "tokens": "34k/200k (17%)" },
+      { "type": "subagent", "lastActive": "61d ago", "model": "glm-5", "tokens": "33k/200k (16%)" },
+      { "type": "wecom", "lastActive": "106d ago", "model": "glm-5.1", "tokens": "19k/205k (9%)" }
     ]
   },
-  "systemHealth": {
-    "model": "glm-5.1",
-    "cronJobs": 15,
-    "allCronsHealthy": false,
-    "uptime": "nominal",
-    "errorsToday": 1,
-    "errorDetails": "key-development-2: error on last run"
-  },
-  "projectStats": {
-    "testCounts": {
-      "agent-task-cli": 1130,
-      "agent-memory-service": 977,
-      "context-forge": 264,
-      "total": 2371
-    },
-    "testProjects": 3,
-    "streakDays": 144,
-    "lastCommit": "98e4482 docs: +F17-F31 — complexity analysis, project comparison, health score, dependency graph, tech stack, duplicate detection, project stats, entry points, risk audit, quality signals, monorepo workspace, TODO/env/license detection, bi-temporal validity"
+  "summary": {
+    "totalCronJobs": 20,
+    "healthy": 18,
+    "errors": 1,
+    "running": 1,
+    "lastUpdated": "2026-07-15T06:00:00+08:00"
   }
 }
