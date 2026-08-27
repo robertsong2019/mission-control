@@ -1,386 +1,295 @@
 {
-  "lastUpdated": "2026-07-17T22:00:00Z",
-  "generatedAt": "2026-07-18 06:00 CST",
-  "activeNow": [
-    {
-      "job": "dashboard-update-morning",
+  "lastUpdated": "2026-08-27T22:04:00Z",
+  "generatedAt": "2026-08-28 06:04 CST",
+  "system": {
+    "gateway": {
       "status": "running",
-      "model": "glm-5.1"
-    }
-  ],
-  "actionRequired": [],
-  "crons": [
+      "port": 34524,
+      "bind": "lan (0.0.0.0)",
+      "dashboard": "http://10.8.0.5:34524/sponf0/",
+      "rpcProbe": "ok",
+      "nodeVersion": "v22.22.1",
+      "openclawVersion": "2026.4.14"
+    },
+    "host": {
+      "os": "Linux 6.8.0-71-generic (x64)",
+      "hostname": "VM-0-5-ubuntu",
+      "uptime": "127 days, 16:42",
+      "loadAverage": "0.32, 0.17, 0.06",
+      "disk": {
+        "total": "50G",
+        "used": "32G",
+        "available": "16G",
+        "usage": "68%"
+      },
+      "memory": {
+        "totalMB": 1935,
+        "usedMB": 1326,
+        "freeMB": 331,
+        "availableMB": 609,
+        "swapTotalMB": 10179,
+        "swapUsedMB": 233
+      }
+    },
+    "model": "zai/glm-5.3-flash"
+  },
+  "cronSummary": {
+    "total": 21,
+    "ok": 19,
+    "error": 1,
+    "running": 1,
+    "errorJobs": [
+      "84707ade (ai-neuroscience-research)"
+    ]
+  },
+  "cronJobs": [
     {
+      "id": "f38e0365",
       "name": "dashboard-update-morning",
-      "schedule": "6:00 AM daily",
-      "id": "f38e0365",
-      "lastRun": "2026-07-17T22:00:00Z",
-      "nextRun": "2026-07-18T22:00:00Z",
+      "schedule": "0 6 * * *",
       "status": "running",
-      "errors": 0
+      "lastRun": "running now"
     },
     {
+      "id": "9b2a8701",
       "name": "github-trending-daily",
-      "schedule": "7:00 AM daily (CST)",
-      "id": "9b2a8701",
-      "lastRun": "2026-07-16T23:00:00Z",
-      "nextRun": "2026-07-17T23:00:00Z",
+      "schedule": "0 7 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "23h ago"
     },
     {
+      "id": "2c714952",
       "name": "github-trending-deep",
-      "schedule": "8:00 AM daily (CST)",
-      "id": "2c714952",
-      "lastRun": "2026-07-16T00:00:00Z",
-      "nextRun": "2026-07-17T00:00:00Z",
+      "schedule": "0 8 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "22h ago"
     },
     {
+      "id": "610a8d6d",
       "name": "github-creative-evening",
-      "schedule": "7:00 PM daily",
-      "id": "610a8d6d",
-      "lastRun": "2026-07-17T08:00:00Z",
-      "nextRun": "2026-07-18T08:00:00Z",
+      "schedule": "0 19 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "11h ago"
     },
     {
-      "name": "github-creative-evening (CST)",
-      "schedule": "7:00 PM daily (CST)",
       "id": "ad37c59a",
-      "lastRun": "2026-07-17T08:00:00Z",
-      "nextRun": "2026-07-18T08:00:00Z",
+      "name": "github-creative-evening",
+      "schedule": "0 19 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "11h ago"
     },
     {
+      "id": "265091b6",
       "name": "deep-exploration-evening",
-      "schedule": "8:00 PM daily",
-      "id": "265091b6",
-      "lastRun": "2026-07-17T10:00:00Z",
-      "nextRun": "2026-07-18T10:00:00Z",
+      "schedule": "0 20 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "10h ago"
     },
     {
-      "name": "deep-exploration-evening (CST)",
-      "schedule": "8:00 PM daily (CST)",
       "id": "a4bf5e2a",
-      "lastRun": "2026-07-17T10:00:00Z",
-      "nextRun": "2026-07-18T10:00:00Z",
+      "name": "deep-exploration-evening",
+      "schedule": "0 20 * * *",
       "status": "ok",
-      "model": "glm-5.1",
-      "errors": 0
+      "lastRun": "10h ago"
     },
     {
-      "name": "deep-exploration-evening (UTC)",
-      "schedule": "12:00 PM UTC daily",
       "id": "bb46cb70",
-      "lastRun": "2026-07-17T10:00:00Z",
-      "nextRun": "2026-07-18T10:00:00Z",
+      "name": "deep-exploration-evening",
+      "schedule": "0 12 * * UTC",
       "status": "ok",
-      "errors": 0
+      "lastRun": "10h ago"
     },
     {
+      "id": "13a2f284",
       "name": "code-lab-evening",
-      "schedule": "9:00 PM daily",
-      "id": "13a2f284",
-      "lastRun": "2026-07-17T09:00:00Z",
-      "nextRun": "2026-07-18T09:00:00Z",
+      "schedule": "0 21 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "9h ago"
     },
     {
-      "name": "tool-development-evening (CST)",
-      "schedule": "10:00 PM daily (CST)",
       "id": "62bf7f3b",
-      "lastRun": "2026-07-17T08:00:00Z",
-      "nextRun": "2026-07-18T08:00:00Z",
-      "status": "ok",
-      "model": "glm-5.1",
-      "errors": 0
-    },
-    {
       "name": "tool-development-evening",
-      "schedule": "10:00 PM daily",
-      "id": "ce2fb615",
-      "lastRun": "2026-07-17T08:00:00Z",
-      "nextRun": "2026-07-18T08:00:00Z",
+      "schedule": "0 22 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "8h ago"
     },
     {
+      "id": "ce2fb615",
+      "name": "tool-development-evening",
+      "schedule": "0 22 * * *",
+      "status": "ok",
+      "lastRun": "8h ago"
+    },
+    {
+      "id": "84707ade",
+      "name": "ai-neuroscience-research",
+      "schedule": "30 22 * * *",
+      "status": "error",
+      "lastRun": "8h ago"
+    },
+    {
+      "id": "78eac6fc",
       "name": "key-development-1",
-      "schedule": "11:00 PM daily",
-      "id": "78eac6fc",
-      "lastRun": "2026-07-17T07:00:00Z",
-      "nextRun": "2026-07-18T07:00:00Z",
+      "schedule": "0 23 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "7h ago"
     },
     {
+      "id": "88679f9e",
       "name": "key-development-2",
-      "schedule": "12:00 AM daily",
-      "id": "88679f9e",
-      "lastRun": "2026-07-17T06:00:00Z",
-      "nextRun": "2026-07-18T06:00:00Z",
+      "schedule": "0 0 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "6h ago"
     },
     {
+      "id": "b0fd7e8d",
       "name": "key-development-3",
-      "schedule": "1:00 AM daily",
-      "id": "b0fd7e8d",
-      "lastRun": "2026-07-17T05:00:00Z",
-      "nextRun": "2026-07-18T05:00:00Z",
+      "schedule": "0 1 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "5h ago"
     },
     {
-      "name": "knowledge-organization (CST)",
-      "schedule": "2:00 AM daily (CST)",
       "id": "1ea6e3b0",
-      "lastRun": "2026-07-17T04:00:00Z",
-      "nextRun": "2026-07-18T04:00:00Z",
-      "status": "ok",
-      "model": "glm-5.1",
-      "errors": 0
-    },
-    {
       "name": "knowledge-organization",
-      "schedule": "2:00 AM daily",
-      "id": "fd0515b0",
-      "lastRun": "2026-07-17T04:00:00Z",
-      "nextRun": "2026-07-18T04:00:00Z",
+      "schedule": "0 2 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "4h ago"
     },
     {
+      "id": "fd0515b0",
+      "name": "knowledge-organization",
+      "schedule": "0 2 * * *",
+      "status": "ok",
+      "lastRun": "4h ago"
+    },
+    {
+      "id": "f7510f1f",
       "name": "project-testing-morning",
-      "schedule": "3:00 AM daily",
-      "id": "f7510f1f",
-      "lastRun": "2026-07-17T03:00:00Z",
-      "nextRun": "2026-07-18T03:00:00Z",
+      "schedule": "0 3 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "3h ago"
     },
     {
+      "id": "77a5bcc6",
       "name": "documentation-morning",
-      "schedule": "4:00 AM daily",
-      "id": "77a5bcc6",
-      "lastRun": "2026-07-17T02:00:00Z",
-      "nextRun": "2026-07-18T02:00:00Z",
+      "schedule": "0 4 * * *",
       "status": "ok",
-      "errors": 0
+      "lastRun": "2h ago"
     },
     {
+      "id": "686ec55c",
       "name": "essay-generation-morning",
-      "schedule": "5:00 AM daily",
-      "id": "686ec55c",
-      "lastRun": "2026-07-17T01:00:00Z",
-      "nextRun": "2026-07-18T01:00:00Z",
+      "schedule": "0 5 * * *",
       "status": "ok",
-      "errors": 0
-    },
-    {
-      "name": "essay-generation-morning (CST)",
-      "schedule": "5:00 AM daily (CST)",
-      "id": "f0362050",
-      "lastRun": "2026-07-16T21:05:00Z",
-      "nextRun": "2026-07-17T21:05:00Z",
-      "status": "ok",
-      "model": "glm-5.1",
-      "errors": 0
-    }
-  ],
-  "sessions": [
-    {
-      "id": "f38e0365",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "1m ago",
-      "contextUsage": "15%"
-    },
-    {
-      "id": "main",
-      "type": "direct",
-      "model": "glm-5-turbo",
-      "lastActive": "13m ago",
-      "contextUsage": "59%"
+      "lastRun": "1h ago"
     },
     {
       "id": "f0362050",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "52m ago",
-      "contextUsage": "28%"
-    },
-    {
-      "id": "686ec55c",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "56m ago",
-      "contextUsage": "29%"
-    },
-    {
-      "id": "77a5bcc6",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "2h ago",
-      "contextUsage": "22%"
-    },
-    {
-      "id": "f7510f1f",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "3h ago",
-      "contextUsage": "43%"
-    },
-    {
-      "id": "1ea6e3b0",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "4h ago",
-      "contextUsage": "46%"
-    },
-    {
-      "id": "fd0515b0",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "4h ago",
-      "contextUsage": "33%"
-    },
-    {
-      "id": "b0fd7e8d",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "5h ago",
-      "contextUsage": "40%"
-    },
-    {
-      "id": "88679f9e",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "6h ago",
-      "contextUsage": "35%"
-    },
-    {
-      "id": "78eac6fc",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "7h ago",
-      "contextUsage": "30%"
-    },
-    {
-      "id": "62bf7f3b",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "8h ago",
-      "contextUsage": "34%"
-    },
-    {
-      "id": "ce2fb615",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "8h ago",
-      "contextUsage": "31%"
-    },
-    {
-      "id": "feishu-4b2769",
-      "type": "feishu",
-      "model": "glm-5.1",
-      "lastActive": "8h ago",
-      "contextUsage": "22%"
-    },
-    {
-      "id": "13a2f284",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "9h ago",
-      "contextUsage": "44%"
-    },
-    {
-      "id": "a4bf5e2a",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "10h ago",
-      "contextUsage": "30%"
-    },
-    {
-      "id": "265091b6",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "10h ago",
-      "contextUsage": "37%"
-    },
-    {
-      "id": "610a8d6d",
-      "type": "cron",
-      "model": "glm-5-turbo",
-      "lastActive": "11h ago",
-      "contextUsage": "24%"
-    },
-    {
-      "id": "ad37c59a",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "11h ago",
-      "contextUsage": "25%"
-    },
-    {
-      "id": "2c714952",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "22h ago",
-      "contextUsage": "21%"
-    },
-    {
-      "id": "9b2a8701",
-      "type": "cron",
-      "model": "glm-5.1",
-      "lastActive": "23h ago",
-      "contextUsage": "14%"
-    },
-    {
-      "id": "446aa706",
-      "type": "subagent",
-      "model": "glm-5.1",
-      "lastActive": "14d ago",
-      "contextUsage": "17%"
-    },
-    {
-      "id": "833363cf",
-      "type": "subagent",
-      "model": "glm-5",
-      "lastActive": "64d ago",
-      "contextUsage": "17%"
-    },
-    {
-      "id": "600e564d",
-      "type": "wecom",
-      "model": "glm-5.1",
-      "lastActive": "109d ago",
-      "contextUsage": "9%"
-    },
-    {
-      "id": "73be1c79",
-      "type": "wecom-group",
-      "model": "glm-5",
-      "lastActive": "124d ago",
-      "contextUsage": "7%"
+      "name": "essay-generation-morning",
+      "schedule": "0 5 * * *",
+      "status": "ok",
+      "lastRun": "54m ago"
     }
   ],
-  "summary": {
-    "totalCronJobs": 20,
-    "activeCronJobs": 20,
-    "errorJobs": 0,
-    "okJobs": 20,
-    "totalSessions": 56,
-    "activeSessions24h": 21,
-    "model": "glm-5.1",
-    "systemStatus": "operational",
-    "uptime": "continuous"
+  "sessions": {
+    "total": 63,
+    "active24h": 47,
+    "notable": [
+      {
+        "type": "main",
+        "lastActive": "13m ago",
+        "model": "glm-5",
+        "context": "103k/200k (52%)"
+      },
+      {
+        "type": "cron (dashboard)",
+        "lastActive": "running now",
+        "model": "glm-5.3-flash",
+        "context": "42k/205k (20%)"
+      },
+      {
+        "type": "cron (essay-gen)",
+        "lastActive": "54m ago",
+        "model": "glm-5.3-flash",
+        "context": "55k/205k (27%)"
+      },
+      {
+        "type": "cron (documentation)",
+        "lastActive": "2h ago",
+        "model": "glm-5.3-flash",
+        "context": "45k/205k (22%)"
+      },
+      {
+        "type": "cron (project-testing)",
+        "lastActive": "10h ago",
+        "model": "glm-5.1",
+        "context": "101k/205k (49%)"
+      },
+      {
+        "type": "cron (knowledge-org)",
+        "lastActive": "4h ago",
+        "model": "glm-5.3-flash",
+        "context": "92k/205k (45%)"
+      },
+      {
+        "type": "cron (key-dev-3)",
+        "lastActive": "5h ago",
+        "model": "glm-5.3-flash",
+        "context": "85k/205k (42%)"
+      },
+      {
+        "type": "cron (key-dev-1)",
+        "lastActive": "7h ago",
+        "model": "glm-5.3-flash",
+        "context": "95k/205k (46%)"
+      },
+      {
+        "type": "cron (ai-neuroscience)",
+        "lastActive": "8h ago",
+        "model": "glm-5.1",
+        "context": "67k/205k (33%)"
+      },
+      {
+        "type": "cron (code-lab)",
+        "lastActive": "8h ago",
+        "model": "glm-5.3-flash",
+        "context": "60k/205k (30%)"
+      },
+      {
+        "type": "cron (tool-dev)",
+        "lastActive": "8h ago",
+        "model": "glm-5.3-flash",
+        "context": "61k/205k (30%)"
+      },
+      {
+        "type": "cron (deep-exploration)",
+        "lastActive": "10h ago",
+        "model": "glm-5.1",
+        "context": "70k/205k (34%)"
+      },
+      {
+        "type": "cron (github-creative)",
+        "lastActive": "11h ago",
+        "model": "glm-5-turbo",
+        "context": "52k/205k (25%)"
+      },
+      {
+        "type": "cron (github-trending-deep)",
+        "lastActive": "22h ago",
+        "model": "glm-5.1",
+        "context": "48k/205k (23%)"
+      }
+    ]
+  },
+  "git": {
+    "repo": "robertsong2019/openclaw-workspace",
+    "lastCommit": "1d10a74 essay cron 08-28 05:00: bug distributed storage essay published (8f18be0 blog) + bookkeeping",
+    "recentCommits": [
+      "1d10a74 essay cron 08-28 05:00: bug distributed storage essay published (8f18be0 blog) + bookkeeping",
+      "e896c01 docs-morning cron 08-28: prompt-mgr docs catch-up log (F1-F15, 5804697)",
+      "cd47936 prompt-mgr pointer: docs catch-up (5804697) — README/API_REFERENCE cover F1-F15, CHANGELOG Unreleased",
+      "f99f6fb morning testing cycle 08-28: prompt-mgr duplicate-impl backslash bug (324→327, 9d783cd) + node --test flake escalation (3rd occurrence → TOOLS.md rule)",
+      "63caf5f knowledge org 08-28: log twin-trigger no-op (cron double-registration evidence +1)"
+    ]
   }
 }
