@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-30T22:04:00Z",
-  "generatedAt": "2026-08-31 06:04 CST",
+  "lastUpdated": "2026-08-31T22:01:00Z",
+  "generatedAt": "2026-09-01 06:01 CST",
   "system": {
     "gateway": {
       "status": "running",
@@ -14,8 +14,8 @@
     "host": {
       "os": "Linux 6.8.0-71-generic (x64)",
       "hostname": "VM-0-5-ubuntu",
-      "uptime": "130 days, 16:41",
-      "loadAverage": "0.82, 0.28, 0.16",
+      "uptime": "131 days, 16:40",
+      "loadAverage": "0.41, 0.10, 0.03",
       "disk": {
         "total": "50G",
         "used": "33G",
@@ -24,24 +24,22 @@
       },
       "memory": {
         "totalMB": 1935,
-        "usedMB": 1340,
-        "freeMB": 390,
-        "availableMB": 595,
+        "usedMB": 1349,
+        "freeMB": 262,
+        "availableMB": 586,
         "swapTotalMB": 10179,
-        "swapUsedMB": 801
+        "swapUsedMB": 337
       }
     },
     "model": "zai/glm-5.3-flash"
   },
   "cronSummary": {
     "total": 15,
-    "ok": 11,
-    "error": 3,
+    "ok": 13,
+    "error": 1,
     "running": 1,
     "errorJobs": [
-      "84707ade (ai-neuroscience-research)",
-      "88679f9e (key-development-2)",
-      "77a5bcc6 (documentation-morning)"
+      "84707ade (ai-neuroscience-research)"
     ]
   },
   "cronJobs": [
@@ -54,47 +52,46 @@
     {"id": "62bf7f3b", "name": "tool-development-evening", "schedule": "0 22 * * *", "status": "ok", "lastRun": "8h ago"},
     {"id": "84707ade", "name": "ai-neuroscience-research", "schedule": "30 22 * * *", "status": "error", "lastRun": "8h ago"},
     {"id": "78eac6fc", "name": "key-development-1", "schedule": "0 23 * * *", "status": "ok", "lastRun": "7h ago"},
-    {"id": "88679f9e", "name": "key-development-2", "schedule": "0 0 * * *", "status": "error", "lastRun": "6h ago"},
+    {"id": "88679f9e", "name": "key-development-2", "schedule": "0 0 * * *", "status": "ok", "lastRun": "6h ago"},
     {"id": "b0fd7e8d", "name": "key-development-3", "schedule": "0 1 * * *", "status": "ok", "lastRun": "5h ago"},
     {"id": "1ea6e3b0", "name": "knowledge-organization", "schedule": "0 2 * * *", "status": "ok", "lastRun": "4h ago"},
     {"id": "f7510f1f", "name": "project-testing-morning", "schedule": "0 3 * * *", "status": "ok", "lastRun": "3h ago"},
-    {"id": "77a5bcc6", "name": "documentation-morning", "schedule": "0 4 * * *", "status": "error", "lastRun": "2h ago"},
+    {"id": "77a5bcc6", "name": "documentation-morning", "schedule": "0 4 * * *", "status": "ok", "lastRun": "2h ago"},
     {"id": "f0362050", "name": "essay-generation-morning", "schedule": "0 5 * * *", "status": "ok", "lastRun": "1h ago"}
   ],
   "sessions": {
-    "total": 57,
-    "active24h": 34,
-    "totalTokens": 3363000,
+    "total": 56,
+    "active24h": 31,
+    "totalTokens": 3170000,
     "notable": [
-      {"type": "cron (dashboard)", "lastActive": "2m ago", "model": "glm-5.3-flash", "context": "42k/205k (20%)"},
-      {"type": "main", "lastActive": "14m ago", "model": "glm-5", "context": "153k/200k (77%)"},
-      {"type": "cron (essay-gen)", "lastActive": "57m ago", "model": "glm-5.3-flash", "context": "57k/205k (28%)"},
-      {"type": "cron (documentation)", "lastActive": "2h ago", "model": "glm-5.3-flash", "context": "75k/205k (36%)"},
-      {"type": "cron (project-testing)", "lastActive": "3h ago", "model": "glm-5.3-flash", "context": "40k/205k (20%)"},
-      {"type": "cron (knowledge-org)", "lastActive": "4h ago", "model": "glm-5.1", "context": "128k/205k (63%)"},
-      {"type": "cron (key-dev-3)", "lastActive": "5h ago", "model": "glm-5.3-flash", "context": "93k/205k (46%)"},
-      {"type": "cron (key-dev-2)", "lastActive": "5h ago", "model": "glm-5.3-flash", "context": "111k/205k (54%)"},
-      {"type": "cron (key-dev-1)", "lastActive": "7h ago", "model": "glm-5.3-flash", "context": "108k/205k (53%)"},
-      {"type": "cron (code-lab)", "lastActive": "8h ago", "model": "glm-5.1", "context": "50k/205k (25%)"},
-      {"type": "cron (tool-dev)", "lastActive": "8h ago", "model": "glm-5.3-flash", "context": "76k/205k (37%)"},
-      {"type": "cron (ai-neuro)", "lastActive": "9h ago", "model": "glm-5.3-flash", "context": "63k/205k (31%)"},
-      {"type": "feishu direct", "lastActive": "9h ago", "model": "glm-5.3-flash", "context": "67k/205k (33%)"},
-      {"type": "cron (deep-exploration)", "lastActive": "10h ago", "model": "glm-5.3-flash", "context": "66k/205k (32%)"},
-      {"type": "cron (github-creative)", "lastActive": "11h ago", "model": "glm-5.3-flash", "context": "44k/205k (22%)"},
-      {"type": "cron (trending-deep)", "lastActive": "22h ago", "model": "glm-5.3-flash", "context": "59k/205k (29%)"},
-      {"type": "cron (trending-daily)", "lastActive": "23h ago", "model": "glm-5.3-flash", "context": "30k/205k (15%)"}
+      {"type": "cron (dashboard)", "lastActive": "1m ago", "model": "glm-5.3-flash", "context": "45k/205k (22%)"},
+      {"type": "main", "lastActive": "13m ago", "model": "glm-5", "context": "163k/200k (81%)"},
+      {"type": "cron (essay-gen)", "lastActive": "56m ago", "model": "glm-5.3-flash", "context": "57k/205k (28%)"},
+      {"type": "cron (documentation)", "lastActive": "2h ago", "model": "glm-5.3-flash", "context": "41k/205k (20%)"},
+      {"type": "cron (project-testing)", "lastActive": "3h ago", "model": "glm-5.3-flash", "context": "50k/205k (24%)"},
+      {"type": "cron (knowledge-org)", "lastActive": "4h ago", "model": "glm-5.1", "context": "123k/205k (60%)"},
+      {"type": "cron (key-dev-3)", "lastActive": "5h ago", "model": "glm-5.3-flash", "context": "97k/205k (47%)"},
+      {"type": "cron (key-dev-2)", "lastActive": "5h ago", "model": "glm-5.3-flash", "context": "118k/205k (58%)"},
+      {"type": "cron (key-dev-1)", "lastActive": "7h ago", "model": "glm-5.3-flash", "context": "58k/205k (29%)"},
+      {"type": "cron (code-lab)", "lastActive": "8h ago", "model": "glm-5.1", "context": "49k/205k (24%)"},
+      {"type": "cron (tool-dev)", "lastActive": "8h ago", "model": "glm-5.3-flash", "context": "56k/205k (27%)"},
+      {"type": "cron (ai-neuro)", "lastActive": "9h ago", "model": "glm-5.3-flash", "context": "90k/205k (44%)"},
+      {"type": "cron (deep-exploration)", "lastActive": "10h ago", "model": "glm-5.3-flash", "context": "60k/205k (29%)"},
+      {"type": "cron (github-creative)", "lastActive": "11h ago", "model": "glm-5.3-flash", "context": "42k/205k (20%)"},
+      {"type": "cron (trending-deep)", "lastActive": "22h ago", "model": "glm-5.3-flash", "context": "52k/205k (25%)"},
+      {"type": "cron (trending-daily)", "lastActive": "23h ago", "model": "glm-5.3-flash", "context": "29k/205k (14%)"}
     ]
   },
   "git": {
     "repo": "robertsong2019/openclaw-workspace",
-    "lastCommit": "3798a88 memory: documentation-morning 08-31 amg README catch-up log (cc642db) + fold in today's kd/testing entries",
+    "lastCommit": "f54f61c docs(openclaw-mcp-server): README reflects per-session transport architecture",
     "recentCommits": [
-      "3798a88 memory: documentation-morning 08-31 amg README catch-up log (cc642db) + fold in today's kd/testing entries",
-      "cc642db docs(amg): README catch-up C520-C531 — official 0.494 arc, judge cascade API, readonly recall",
-      "193f246 log: experiments.tsv row for agent-observability rateLimit +11 (2026-08-31 03:00 cycle)",
-      "2a9c82f test(agent-observability): rateLimit policy rule coverage 0→11 tests",
-      "43c1e56 KO day 308: MEMORY Current Focus 08-31 (C529-C531 judge chain, cascade 0.494) + HEARTBEAT counts refresh",
-      "0cde6a3 C531 kd-3 memory: veto census 复核 → either/or answer-face rescue, banked 247/500 (0.494)"
+      "f54f61c docs(openclaw-mcp-server): README reflects per-session transport architecture",
+      "ac0290a openclaw-mcp-server: per-session transports fix concurrent-client lockout",
+      "582492c KO 09-01 (day 309): integrate C532-C535 arc (banked 0.494->0.502, suite 10158), heartbeat refresh",
+      "9ca1c3f C535 kd-3 memory: judge residue fold (punctuation glue + BrE/AmE), banked 250->251 (0.502), b759caee rescued, banked-caliber formula pinned",
+      "ec9cdfc amg C535: experiments.tsv row (ecf74a2, banked 250->251)",
+      "ecf74a2 amg C535: judge _sem_norm residue fold — markdown escapes/quotes/brackets/underscores fold to word separators + British→American lexeme table (+1 official rescue, banked 250→251 / 0.502)"
     ]
   }
 }
