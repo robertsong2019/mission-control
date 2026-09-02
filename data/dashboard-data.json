@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-01T22:02:38Z",
-  "generatedAt": "2026-09-02 06:02 CST",
+  "lastUpdated": "2026-09-02T22:02:56Z",
+  "generatedAt": "2026-09-03 06:00 CST",
   "system": {
     "gateway": {
       "status": "running",
@@ -14,32 +14,34 @@
     "host": {
       "os": "Linux 6.8.0-71-generic (x64)",
       "hostname": "VM-0-5-ubuntu",
-      "uptime": "132 days, 16:41",
-      "loadAverage": "0.84, 0.27, 0.12",
+      "uptime": "133 days, 16:42",
+      "loadAverage": "0.76, 0.42, 0.22",
       "disk": {
         "total": "50G",
-        "used": "33G",
-        "available": "15G",
-        "usage": "69%"
+        "used": "32G",
+        "available": "16G",
+        "usage": "68%"
       },
       "memory": {
         "totalMB": 1935,
-        "usedMB": 1125,
-        "freeMB": 452,
-        "availableMB": 810,
+        "usedMB": 1426,
+        "freeMB": 287,
+        "availableMB": 509,
         "swapTotalMB": 10179,
-        "swapUsedMB": 356
+        "swapUsedMB": 923
       }
     },
     "model": "zai/glm-5.3-flash"
   },
   "cronSummary": {
     "total": 15,
-    "ok": 13,
-    "error": 1,
+    "ok": 11,
+    "error": 3,
     "running": 1,
     "errorJobs": [
-      "84707ade (ai-neuroscience-research)"
+      "84707ade (ai-neuroscience-research)",
+      "78eac6fc (key-development-1)",
+      "f0362050 (essay-generation-morning)"
     ]
   },
   "cronJobs": [
@@ -103,7 +105,7 @@
       "id": "78eac6fc",
       "name": "key-development-1",
       "schedule": "0 23 * * *",
-      "status": "ok",
+      "status": "error",
       "lastRun": "7h ago"
     },
     {
@@ -145,124 +147,126 @@
       "id": "f0362050",
       "name": "essay-generation-morning",
       "schedule": "0 5 * * *",
-      "status": "ok",
+      "status": "error",
       "lastRun": "1h ago"
     }
   ],
   "sessions": {
     "total": 56,
     "unique": 41,
-    "active24h": 16,
-    "totalTokens": 2309747,
+    "active24h": 31,
+    "totalTokens": 3185934,
     "notable": [
       {
-        "type": "cron (dashboard)",
-        "lastActive": "now",
+        "type": "f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
+        "lastActive": "2m ago",
         "model": "glm-5.3-flash",
-        "context": "44k/205k (22%)"
+        "context": "41k/204k (20%)"
+      },
+      {
+        "type": "47e625b8-7e3f-40f5-9a35-23232ececb8c",
+        "lastActive": "2m ago",
+        "model": "glm-5.3-flash",
+        "context": "41k/204k (20%)"
       },
       {
         "type": "main",
-        "lastActive": "13m ago",
+        "lastActive": "15m ago",
         "model": "glm-5",
-        "context": "173k/200k (87%)"
+        "context": "183k/200k (91%)"
       },
       {
-        "type": "cron (essay-gen)",
-        "lastActive": "56m ago",
-        "model": "glm-5.3-flash",
-        "context": "55k/205k (27%)"
+        "type": "f0362050-d109-45ca-971b-6cc9cfad90eb",
+        "lastActive": "1h ago",
+        "model": "glm-5.1",
+        "context": "54k/204k (26%)"
       },
       {
-        "type": "cron (documentation)",
+        "type": "046452fa-17ad-47b9-872c-aa03b1a11b9a",
+        "lastActive": "1h ago",
+        "model": "glm-5.1",
+        "context": "54k/204k (26%)"
+      },
+      {
+        "type": "77a5bcc6-1342-4ff4-836a-f640973006dc",
         "lastActive": "2h ago",
         "model": "glm-5.3-flash",
-        "context": "73k/205k (36%)"
+        "context": "58k/204k (28%)"
       },
       {
-        "type": "cron (project-testing)",
+        "type": "e59b4e2c-89c9-44a3-8999-a6ef35901271",
+        "lastActive": "2h ago",
+        "model": "glm-5.3-flash",
+        "context": "58k/204k (28%)"
+      },
+      {
+        "type": "f7510f1f-9db8-46e7-8019-3c9a4858db2e",
+        "lastActive": "2h ago",
+        "model": "glm-5.3-flash",
+        "context": "40k/204k (19%)"
+      },
+      {
+        "type": "cf2df0bd-08e8-4bff-ba7a-bdabf0a4a5ac",
         "lastActive": "3h ago",
         "model": "glm-5.3-flash",
-        "context": "54k/205k (26%)"
+        "context": "40k/204k (19%)"
       },
       {
-        "type": "cron (key-dev-3)",
-        "lastActive": "4h ago",
-        "model": "glm-5.3-flash",
-        "context": "75k/205k (37%)"
-      },
-      {
-        "type": "cron (knowledge-org)",
+        "type": "1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "lastActive": "4h ago",
         "model": "glm-5.1",
-        "context": "111k/205k (54%)"
+        "context": "92k/204k (44%)"
       },
       {
-        "type": "cron (key-dev-2)",
+        "type": "dfb99230-c7b0-4cae-8075-9f02a4a3ae92",
+        "lastActive": "4h ago",
+        "model": "glm-5.1",
+        "context": "92k/204k (44%)"
+      },
+      {
+        "type": "b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
+        "lastActive": "4h ago",
+        "model": "glm-5.3-flash",
+        "context": "110k/204k (53%)"
+      },
+      {
+        "type": "e42584af-e3ca-42b4-9084-d377a612658b",
         "lastActive": "5h ago",
         "model": "glm-5.3-flash",
-        "context": "67k/205k (33%)"
+        "context": "117k/204k (57%)"
       },
       {
-        "type": "cron (key-dev-1)",
+        "type": "88679f9e-ba09-4e1a-8dbd-a2dc12808544",
+        "lastActive": "5h ago",
+        "model": "glm-5.3-flash",
+        "context": "73k/204k (36%)"
+      },
+      {
+        "type": "78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
+        "lastActive": "5h ago",
+        "model": "glm-5.3-flash",
+        "context": "91k/204k (44%)"
+      },
+      {
+        "type": "61bac930-85d4-4c76-be5e-f4c3561a3ebd",
         "lastActive": "6h ago",
         "model": "glm-5.3-flash",
-        "context": "109k/205k (53%)"
-      },
-      {
-        "type": "cron (ai-neuro)",
-        "lastActive": "8h ago",
-        "model": "glm-5.1",
-        "context": "49k/205k (24%)"
-      },
-      {
-        "type": "cron (tool-dev)",
-        "lastActive": "8h ago",
-        "model": "glm-5.3-flash",
-        "context": "94k/205k (46%)"
-      },
-      {
-        "type": "cron (code-lab)",
-        "lastActive": "9h ago",
-        "model": "glm-5.3-flash",
-        "context": "121k/205k (59%)"
-      },
-      {
-        "type": "cron (deep-exploration)",
-        "lastActive": "10h ago",
-        "model": "glm-5.3-flash",
-        "context": "74k/205k (36%)"
-      },
-      {
-        "type": "cron (github-creative)",
-        "lastActive": "11h ago",
-        "model": "glm-5.3-flash",
-        "context": "46k/205k (23%)"
-      },
-      {
-        "type": "cron (trending-deep)",
-        "lastActive": "22h ago",
-        "model": "glm-5.3-flash",
-        "context": "47k/205k (23%)"
-      },
-      {
-        "type": "cron (trending-daily)",
-        "lastActive": "23h ago",
-        "model": "glm-5.3-flash",
-        "context": "38k/205k (19%)"
+        "context": "71k/204k (34%)"
       }
     ]
   },
   "git": {
     "repo": "robertsong2019/openclaw-workspace",
-    "lastCommit": "95ab251 memory: 2026-09-02 documentation round entry (amg README C532-C539 + TUTORIAL-ANSWER-FACES + C538 ledger slip correction)",
+    "lastCommit": "3f3b101 docs(amg): README + TUTORIAL-ANSWER-FACES catch-up C540-C542 — 0.510→0.520, judge 侧 face 家族 + C536 sequel",
     "recentCommits": [
-      "95ab251 memory: 2026-09-02 documentation round entry (amg README C532-C539 + TUTORIAL-ANSWER-FACES + C538 ledger slip correction)",
-      "db45be4 docs(amg): README catch-up C532-C539 — 破半之路 0.494→0.510 + TUTORIAL-ANSWER-FACES",
-      "5ddd76e memory: 2026-09-02 project-testing cycle entry (a2a-trust 59->81, simhash fix)",
-      "6d76772 a2a-trust: trust-engine-v2 test coverage 59→81 (+22) + simhash short-text banding fix",
-      "4269dd2 C539 (kd-3): answer-gate opener-statement demotion floor",
-      "dbd5f5e C538(kd-2): answer-gate acquisition/conversation statement face — banked 252→254 (0.506)"
+      "3f3b101 docs(amg): README + TUTORIAL-ANSWER-FACES catch-up C540-C542 — 0.510→0.520",
+      "71b81e0 test(pocket-agent): first suite 0→24 + fix 3 red-verified bugs",
+      "2adcf92 amg C542 (kd-3): judge quoted-core GT-wrap face, banked 259→260 (0.518→0.520)",
+      "14e8991 amg C541 (kd-2): judge reference-alias faces + where-gate intent guard, 256→259 (0.512→0.518)",
+      "a1b2dbc memory: C540 kd-4 ledger (banked 0.510→0.512, ordinal face wired)",
+      "277f90b amg C540 (kd-4): ordinal-item face WIRED — phrase-run tie-break closes C536 debt",
+      "cdd07bb memory: 2026-09-02 evening code-lab cycles (agent-context-store c204-c206b)",
+      "95ab251 memory: 2026-09-02 documentation round entry (amg README C532-C539)"
     ]
   }
 }
