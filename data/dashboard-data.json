@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-03T22:02:37.615Z",
-  "generatedAt": "2026-09-04 06:00 CST",
+  "lastUpdated": "2026-09-04T22:03:00.000Z",
+  "generatedAt": "2026-09-05 06:00 CST",
   "system": {
     "gateway": {
       "status": "running",
@@ -14,8 +14,8 @@
     "host": {
       "os": "Linux 6.8.0-71-generic (x64)",
       "hostname": "VM-0-5-ubuntu",
-      "uptime": "134 days, 16:41",
-      "loadAverage": "0.98, 0.45, 0.24",
+      "uptime": "135 days, 16:41",
+      "loadAverage": "0.42, 0.14, 0.11",
       "disk": {
         "total": "50G",
         "used": "32G",
@@ -24,11 +24,11 @@
       },
       "memory": {
         "totalMB": 1935,
-        "usedMB": 1382,
-        "freeMB": 353,
-        "availableMB": 553,
+        "usedMB": 1326,
+        "freeMB": 252,
+        "availableMB": 609,
         "swapTotalMB": 10179,
-        "swapUsedMB": 960
+        "swapUsedMB": 347
       }
     },
     "model": "zai/glm-5.3-flash"
@@ -39,8 +39,8 @@
     "error": 2,
     "running": 1,
     "errorJobs": [
-      "84707ade (ai-neuroscience-research)",
-      "b0fd7e8d (key-development-3)"
+      "2c714952 (github-trending-deep)",
+      "84707ade (ai-neuroscience-research)"
     ]
   },
   "cronJobs": [
@@ -62,7 +62,7 @@
       "id": "2c714952",
       "name": "github-trending-deep",
       "schedule": "0 8 * * *",
-      "status": "ok",
+      "status": "error",
       "lastRun": "22h ago"
     },
     {
@@ -118,7 +118,7 @@
       "id": "b0fd7e8d",
       "name": "key-development-3",
       "schedule": "0 1 * * *",
-      "status": "error",
+      "status": "ok",
       "lastRun": "5h ago"
     },
     {
@@ -154,118 +154,115 @@
     "total": 56,
     "unique": 40,
     "active24h": 31,
-    "totalTokens": 3218223,
+    "totalTokens": 3307000,
     "notable": [
       {
         "type": "cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
-        "lastActive": "3m ago",
+        "lastActive": "1m ago",
         "model": "glm-5.3-flash",
         "context": "41k/205k (20%)"
       },
       {
         "type": "main",
-        "lastActive": "15m ago",
+        "lastActive": "13m ago",
         "model": "glm-5",
-        "context": "95k/200k (48%)"
+        "context": "117k/200k (58%)"
       },
       {
         "type": "cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
         "lastActive": "57m ago",
         "model": "glm-5.3-flash",
-        "context": "51k/205k (25%)"
+        "context": "52k/205k (25%)"
       },
       {
         "type": "cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
         "lastActive": "2h ago",
         "model": "glm-5.3-flash",
-        "context": "56k/205k (28%)"
+        "context": "63k/205k (31%)"
       },
       {
         "type": "cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
-        "lastActive": "2h ago",
+        "lastActive": "3h ago",
         "model": "glm-5.3-flash",
-        "context": "54k/205k (26%)"
+        "context": "51k/205k (25%)"
       },
       {
         "type": "cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
-        "lastActive": "3h ago",
+        "lastActive": "4h ago",
         "model": "glm-5.3-flash",
-        "context": "87k/205k (43%)"
+        "context": "121k/205k (59%)"
       },
       {
         "type": "cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "lastActive": "4h ago",
         "model": "glm-5.1",
-        "context": "132k/205k (64%)"
+        "context": "139k/205k (68%)"
       },
       {
         "type": "cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
         "lastActive": "5h ago",
         "model": "glm-5.3-flash",
-        "context": "90k/205k (44%)"
+        "context": "119k/205k (58%)"
       },
       {
         "type": "cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "lastActive": "6h ago",
         "model": "glm-5.3-flash",
-        "context": "108k/205k (53%)"
+        "context": "99k/205k (48%)"
       },
       {
         "type": "cron:84707ade-1c71-4b06-af17-05e62a021781",
-        "lastActive": "7h ago",
+        "lastActive": "8h ago",
         "model": "glm-5.1",
-        "context": "66k/205k (32%)"
+        "context": "56k/205k (27%)"
       },
       {
         "type": "cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
-        "lastActive": "7h ago",
+        "lastActive": "8h ago",
         "model": "glm-5.3-flash",
-        "context": "54k/205k (26%)"
+        "context": "63k/205k (31%)"
       },
       {
         "type": "cron:13a2f284-a1ed-4394-979a-5392fbdf50f7",
         "lastActive": "9h ago",
         "model": "glm-5.3-flash",
-        "context": "69k/205k (34%)"
+        "context": "95k/205k (46%)"
       },
       {
         "type": "cron:a4bf5e2a-a7ba-4e00-a8a5-fb3b03d6fd66",
-        "lastActive": "9h ago",
+        "lastActive": "10h ago",
         "model": "glm-5.3-flash",
-        "context": "61k/205k (30%)"
+        "context": "63k/205k (31%)"
       },
       {
         "type": "cron:ad37c59a-6265-4e29-b372-71788835afbf",
         "lastActive": "11h ago",
         "model": "glm-5.3-flash",
-        "context": "53k/205k (26%)"
+        "context": "42k/205k (21%)"
       },
       {
         "type": "cron:2c714952-04af-4192-8e0a-95758dcbb3db",
         "lastActive": "22h ago",
         "model": "glm-5.3-flash",
-        "context": "56k/205k (27%)"
+        "context": "50k/205k (24%)"
       },
       {
         "type": "cron:9b2a8701-ab69-49b0-bef4-d9ef6d7ecf9e",
         "lastActive": "23h ago",
         "model": "glm-5.3-flash",
-        "context": "38k/205k (18%)"
+        "context": "30k/205k (14%)"
       }
     ]
   },
   "git": {
     "repo": "robertsong2019/openclaw-workspace",
-    "lastCommit": "10b6cb6 docs(amg): Cycles 543-545 README section (0.520->0.526, census-negative double close + judge faces 4-6) + TUTORIAL-ANSWER-FACES extended to C545",
+    "lastCommit": "08793d1 essay 09-05: 证伪的尸体是矿 (C548 角色分离) + cron 记录",
     "recentCommits": [
-      "10b6cb6 docs(amg): Cycles 543-545 README section (0.520->0.526, census-negative double close + judge faces 4-6) + TUTORIAL-ANSWER-FACES extended to C545",
-      "d796deb docs(memory): 2026-09-04 test loop notes + error pattern (file clobber)",
-      "ed54b8b fix(ams): restore experiments.tsv history (clobbered in 28b2d0b) + append isolation-fix rows",
-      "28b2d0b chore(ams): experiments.tsv — test isolation fix baseline (721/722 -> 724/724)",
-      "3074c6d fix(ams): constructor option allowlist + test isolation (dataDir/dir/string misuse polluted ./data/memory)",
-      "ec2b79a memory+experiments: C545 sidechannel census-negative (queue③ closed, 48-row 3-arm 25=25=25 net-zero) + bare-affirm face 262→263 0.526",
-      "7f525f4 amg: C545 bare-affirm face + sidechannel production-decision pin — banked 262→263 (0.524→0.526)",
-      "3d4ae43 memory+heartbeat: C544 ledger updates (kd-2 uncommitted leftovers: judge faces 260→262 0.524, suite 10240)"
+      "08793d1 essay 09-05: 证伪的尸体是矿 (C548 角色分离) + cron 记录",
+      "docs: documentation-morning — amg C546-548 arc 0.526→0.540 (README new section + overview pointer; TUTORIAL 529-548, §3.7 role-separation face, §6 impostor census dual-direction, quick-ref 19 rows / 7 principles) + a2a-minimal README test-suite section (32 tests, malformed-input robustness table, zero doc coverage before)",
+      "memory+experiments: 3AM project-testing cycle — a2a-minimal 0→32 first suite, do_POST malformed-input crash red×5 fixed (-32700/-32600), 32/32 x2 green",
+      "memory: KO 2026-09-05 — C546/C547/C548 arc 0.526→0.540 (day 313), amg 10271/acs 2983/ams 724, activity section rebuilt",
+      "amg: C548 cross-session user-statement challenge face — banked 264→270 (0.528→0.540), +6 rescues 0 kills (role separation gates: role=user + cross-session + phrase-run dominance)"
     ]
   }
 }
