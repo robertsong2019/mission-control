@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-04T22:03:00.000Z",
-  "generatedAt": "2026-09-05 06:00 CST",
+  "lastUpdated": "2026-09-06T06:03:18.000Z",
+  "generatedAt": "2026-09-06 06:03 CST",
   "system": {
     "gateway": {
       "status": "running",
@@ -14,8 +14,8 @@
     "host": {
       "os": "Linux 6.8.0-71-generic (x64)",
       "hostname": "VM-0-5-ubuntu",
-      "uptime": "135 days, 16:41",
-      "loadAverage": "0.42, 0.14, 0.11",
+      "uptime": "19 weeks, 3 days, 16 hours, 43 minutes",
+      "loadAverage": "0.76, 0.63, 0.27",
       "disk": {
         "total": "50G",
         "used": "32G",
@@ -24,11 +24,11 @@
       },
       "memory": {
         "totalMB": 1935,
-        "usedMB": 1326,
-        "freeMB": 252,
-        "availableMB": 609,
+        "usedMB": 1343,
+        "freeMB": 361,
+        "availableMB": 592,
         "swapTotalMB": 10179,
-        "swapUsedMB": 347
+        "swapUsedMB": 806
       }
     },
     "model": "zai/glm-5.3-flash"
@@ -39,8 +39,8 @@
     "error": 2,
     "running": 1,
     "errorJobs": [
-      "2c714952 (github-trending-deep)",
-      "84707ade (ai-neuroscience-research)"
+      "84707ade (ai-neuroscience-research)",
+      "1ea6e3b0 (knowledge-organization-morning)"
     ]
   },
   "cronJobs": [
@@ -60,9 +60,9 @@
     },
     {
       "id": "2c714952",
-      "name": "github-trending-deep",
+      "name": "github-trending-deep-analysis",
       "schedule": "0 8 * * *",
-      "status": "error",
+      "status": "ok",
       "lastRun": "22h ago"
     },
     {
@@ -98,7 +98,7 @@
       "name": "ai-neuroscience-research",
       "schedule": "30 22 * * *",
       "status": "error",
-      "lastRun": "8h ago"
+      "lastRun": "7h ago"
     },
     {
       "id": "78eac6fc",
@@ -123,9 +123,9 @@
     },
     {
       "id": "1ea6e3b0",
-      "name": "knowledge-organization",
+      "name": "knowledge-organization-morning",
       "schedule": "0 2 * * *",
-      "status": "ok",
+      "status": "error",
       "lastRun": "4h ago"
     },
     {
@@ -152,117 +152,106 @@
   ],
   "sessions": {
     "total": 56,
-    "unique": 40,
+    "unique": 56,
     "active24h": 31,
-    "totalTokens": 3307000,
-    "notable": [
+    "totalTokens": 3387441,
+    "recent": [
       {
-        "type": "cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
-        "lastActive": "1m ago",
+        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
+        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
         "model": "glm-5.3-flash",
-        "context": "41k/205k (20%)"
+        "totalTokens": 48277,
+        "updatedAt": "3m ago"
       },
       {
-        "type": "main",
-        "lastActive": "13m ago",
+        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:d097ad2a-b13c-4737-bcbf-078d8be5bea2",
+        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:d097ad2a-b13c-4737-bcbf-078d8be5bea2",
+        "model": "glm-5.3-flash",
+        "totalTokens": 48277,
+        "updatedAt": "3m ago"
+      },
+      {
+        "key": "agent:main:main",
+        "label": "agent:main:main",
         "model": "glm-5",
-        "context": "117k/200k (58%)"
+        "totalTokens": 126520,
+        "updatedAt": "15m ago"
       },
       {
-        "type": "cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
-        "lastActive": "57m ago",
+        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
+        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
         "model": "glm-5.3-flash",
-        "context": "52k/205k (25%)"
+        "totalTokens": 56131,
+        "updatedAt": "58m ago"
       },
       {
-        "type": "cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
-        "lastActive": "2h ago",
-        "model": "glm-5.3-flash",
-        "context": "63k/205k (31%)"
-      },
-      {
-        "type": "cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
-        "lastActive": "3h ago",
-        "model": "glm-5.3-flash",
-        "context": "51k/205k (25%)"
-      },
-      {
-        "type": "cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
-        "lastActive": "4h ago",
-        "model": "glm-5.3-flash",
-        "context": "121k/205k (59%)"
-      },
-      {
-        "type": "cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
-        "lastActive": "4h ago",
+        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:4e3d88b7-87be-4092-87ba-904c29f93683",
+        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:4e3d88b7-87be-4092-87ba-904c29f93683",
         "model": "glm-5.1",
-        "context": "139k/205k (68%)"
+        "totalTokens": 55111,
+        "updatedAt": "1h ago"
       },
       {
-        "type": "cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
-        "lastActive": "5h ago",
+        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
+        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
         "model": "glm-5.3-flash",
-        "context": "119k/205k (58%)"
+        "totalTokens": 42534,
+        "updatedAt": "2h ago"
       },
       {
-        "type": "cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
-        "lastActive": "6h ago",
+        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:baea10c6-ca5c-45e7-877d-ba6c756c4cc5",
+        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:baea10c6-ca5c-45e7-877d-ba6c756c4cc5",
         "model": "glm-5.3-flash",
-        "context": "99k/205k (48%)"
+        "totalTokens": 42534,
+        "updatedAt": "2h ago"
       },
       {
-        "type": "cron:84707ade-1c71-4b06-af17-05e62a021781",
-        "lastActive": "8h ago",
+        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
+        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
+        "model": "glm-5.3-flash",
+        "totalTokens": 52262,
+        "updatedAt": "3h ago"
+      },
+      {
+        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:30950182-3281-4658-b85c-582f4209c338",
+        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:30950182-3281-4658-b85c-582f4209c338",
+        "model": "glm-5.3-flash",
+        "totalTokens": 52262,
+        "updatedAt": "3h ago"
+      },
+      {
+        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
+        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "model": "glm-5.1",
-        "context": "56k/205k (27%)"
+        "totalTokens": 143412,
+        "updatedAt": "4h ago"
       },
       {
-        "type": "cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
-        "lastActive": "8h ago",
-        "model": "glm-5.3-flash",
-        "context": "63k/205k (31%)"
+        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:35bb0ad2-4ded-4de2-a961-ac375ce74937",
+        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:35bb0ad2-4ded-4de2-a961-ac375ce74937",
+        "model": "glm-5.1",
+        "totalTokens": 143412,
+        "updatedAt": "4h ago"
       },
       {
-        "type": "cron:13a2f284-a1ed-4394-979a-5392fbdf50f7",
-        "lastActive": "9h ago",
+        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
+        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
         "model": "glm-5.3-flash",
-        "context": "95k/205k (46%)"
-      },
-      {
-        "type": "cron:a4bf5e2a-a7ba-4e00-a8a5-fb3b03d6fd66",
-        "lastActive": "10h ago",
-        "model": "glm-5.3-flash",
-        "context": "63k/205k (31%)"
-      },
-      {
-        "type": "cron:ad37c59a-6265-4e29-b372-71788835afbf",
-        "lastActive": "11h ago",
-        "model": "glm-5.3-flash",
-        "context": "42k/205k (21%)"
-      },
-      {
-        "type": "cron:2c714952-04af-4192-8e0a-95758dcbb3db",
-        "lastActive": "22h ago",
-        "model": "glm-5.3-flash",
-        "context": "50k/205k (24%)"
-      },
-      {
-        "type": "cron:9b2a8701-ab69-49b0-bef4-d9ef6d7ecf9e",
-        "lastActive": "23h ago",
-        "model": "glm-5.3-flash",
-        "context": "30k/205k (14%)"
+        "totalTokens": 67911,
+        "updatedAt": "4h ago"
       }
     ]
   },
   "git": {
     "repo": "robertsong2019/openclaw-workspace",
-    "lastCommit": "08793d1 essay 09-05: 证伪的尸体是矿 (C548 角色分离) + cron 记录",
+    "lastCommit": "49ede4e docs: documentation-morning — pocket-agent self_evolving_agent zero→full coverage (README dual-module table + 30s quickstart + tests section; TUTORIAL §5 expanded: evolve 3-step mechanism, code-as-identity hash/generation, 3 real bugs from test cycle as lessons, template-integrity guard pattern)",
     "recentCommits": [
-      "08793d1 essay 09-05: 证伪的尸体是矿 (C548 角色分离) + cron 记录",
-      "docs: documentation-morning — amg C546-548 arc 0.526→0.540 (README new section + overview pointer; TUTORIAL 529-548, §3.7 role-separation face, §6 impostor census dual-direction, quick-ref 19 rows / 7 principles) + a2a-minimal README test-suite section (32 tests, malformed-input robustness table, zero doc coverage before)",
-      "memory+experiments: 3AM project-testing cycle — a2a-minimal 0→32 first suite, do_POST malformed-input crash red×5 fixed (-32700/-32600), 32/32 x2 green",
-      "memory: KO 2026-09-05 — C546/C547/C548 arc 0.526→0.540 (day 313), amg 10271/acs 2983/ams 724, activity section rebuilt",
-      "amg: C548 cross-session user-statement challenge face — banked 264→270 (0.528→0.540), +6 rescues 0 kills (role separation gates: role=user + cross-session + phrase-run dominance)"
+      "49ede4e docs: documentation-morning — pocket-agent self_evolving_agent zero→full coverage (README dual-module table + 30s quickstart + tests section; TUTORIAL §5 expanded: evolve 3-step mechanism, code-as-identity hash/generation, 3 real bugs from test cycle as lessons, template-integrity guard pattern)",
+      "9c442c7 pocket-agent: self_evolving_agent first suite 0→34, fix dead base64 template + malformed-spec crash",
+      "1f6bc98 knowledge-org: 09-06 KO — C549/C550/C551 0.540→0.556 (amg 10290, banked 278/500), atc R71+R72 1767, a2a-minimal 32 + wget-rust 25 new ledger entries, day 314; HEARTBEAT/MEMORY counts refreshed, authoritative chain → /tmp/c551/live500_c551.json",
+      "871ff64 C551(kd-3): temporal full-graph-first anchor resolution — banked 273→278 live (0.546→0.556)",
+      "5b0a48d memory: C550 kd-2 qty-stated face notes (+3 rescues, mined-out judgments need gate scoping)",
+      "f50002e amg: C550 counting qty-stated face — banked 270→273 (0.540→0.546), +3/0 kill: digit-quantity statements outrank enum_count signature counting (recency for single-type, sum for coordinated; digits-only after naive all-numerals variant simulated 14 KILLs = falsified pre-wiring; lookahead value scan so '40 or 50 followers' abstains; non-candidate turns scan head-stem clauses); production-identical census 3 RESCUE/0 KILL/7 no-fire over 10-row enum_count population, 54-row replay byte-identical off-flip; ledger quirk: live500_head banked flags are 0.520-era, 0.540 chain lives in C548 ab500 new_preds; +11 tests test_qty_stated_face.py, 2 quant_rerank mechanism pins preserved via counting=False + pathway comments; suite 10274→10285 green 200s"
     ]
   }
 }
