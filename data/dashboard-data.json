@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-06T22:03:00.000Z",
-  "generatedAt": "2026-09-07 06:03 CST",
+  "lastUpdated": "2026-09-07T22:06:09.000Z",
+  "generatedAt": "2026-09-08 06:06 CST",
   "system": {
     "gateway": {
       "status": "running",
@@ -14,45 +14,46 @@
     "host": {
       "os": "Linux 6.8.0-71-generic (x64)",
       "hostname": "VM-0-5-ubuntu",
-      "uptime": "19 weeks, 4 days, 16 hours, 42 minutes",
-      "loadAverage": "0.58, 0.21, 0.10",
+      "uptime": "19 weeks, 5 days, 16 hours, 46 minutes",
+      "loadAverage": "0.10, 0.17, 0.09",
       "disk": {
         "total": "50G",
-        "used": "32G",
-        "available": "16G",
+        "used": "33G",
+        "available": "15G",
         "usage": "69%"
       },
       "memory": {
         "totalMB": 1935,
-        "usedMB": 1303,
-        "freeMB": 436,
-        "availableMB": 632,
+        "usedMB": 1302,
+        "freeMB": 413,
+        "availableMB": 633,
         "swapTotalMB": 10179,
-        "swapUsedMB": 806
+        "swapUsedMB": 474
       }
     },
     "model": "zai/glm-5.3-flash"
   },
   "cronSummary": {
     "total": 15,
-    "ok": 12,
-    "error": 2,
+    "ok": 13,
+    "error": 1,
     "running": 1,
     "errorJobs": [
-      "84707ade (ai-neuroscience-research)",
-      "f7510f1f (project-testing-morning)"
+      "84707ade (ai-neuroscience-research)"
     ]
   },
   "cronJobs": [
     {
       "id": "f38e0365",
+      "fullId": "f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
       "name": "dashboard-update-morning",
-      "schedule": "0 6 * * *",
+      "schedule": "0 6 * * * (exact)",
       "status": "running",
-      "lastRun": "running now"
+      "lastRun": "1d ago"
     },
     {
       "id": "9b2a8701",
+      "fullId": "9b2a8701-ab69-49b0-bef4-d9ef6d7ecf9e",
       "name": "github-trending-daily",
       "schedule": "0 7 * * *",
       "status": "ok",
@@ -60,6 +61,7 @@
     },
     {
       "id": "2c714952",
+      "fullId": "2c714952-04af-4192-8e0a-95758dcbb3db",
       "name": "github-trending-deep-analysis",
       "schedule": "0 8 * * *",
       "status": "ok",
@@ -67,6 +69,7 @@
     },
     {
       "id": "ad37c59a",
+      "fullId": "ad37c59a-6265-4e29-b372-71788835afbf",
       "name": "github-creative-evening",
       "schedule": "0 19 * * *",
       "status": "ok",
@@ -74,6 +77,7 @@
     },
     {
       "id": "a4bf5e2a",
+      "fullId": "a4bf5e2a-a7ba-4e00-a8a5-fb3b03d6fd66",
       "name": "deep-exploration-evening",
       "schedule": "0 20 * * *",
       "status": "ok",
@@ -81,13 +85,15 @@
     },
     {
       "id": "13a2f284",
+      "fullId": "13a2f284-a1ed-4394-979a-5392fbdf50f7",
       "name": "code-lab-evening",
-      "schedule": "0 21 * * *",
+      "schedule": "0 21 * * * (exact)",
       "status": "ok",
       "lastRun": "9h ago"
     },
     {
       "id": "62bf7f3b",
+      "fullId": "62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
       "name": "tool-development-evening",
       "schedule": "0 22 * * *",
       "status": "ok",
@@ -95,6 +101,7 @@
     },
     {
       "id": "84707ade",
+      "fullId": "84707ade-1c71-4b06-af17-05e62a021781",
       "name": "ai-neuroscience-research",
       "schedule": "30 22 * * *",
       "status": "error",
@@ -102,27 +109,31 @@
     },
     {
       "id": "78eac6fc",
+      "fullId": "78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
       "name": "key-development-1",
-      "schedule": "0 23 * * *",
+      "schedule": "0 23 * * * (exact)",
       "status": "ok",
       "lastRun": "7h ago"
     },
     {
       "id": "88679f9e",
+      "fullId": "88679f9e-ba09-4e1a-8dbd-a2dc12808544",
       "name": "key-development-2",
-      "schedule": "0 0 * * *",
+      "schedule": "0 0 * * * (exact)",
       "status": "ok",
       "lastRun": "6h ago"
     },
     {
       "id": "b0fd7e8d",
+      "fullId": "b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
       "name": "key-development-3",
-      "schedule": "0 1 * * *",
+      "schedule": "0 1 * * * (exact)",
       "status": "ok",
       "lastRun": "5h ago"
     },
     {
       "id": "1ea6e3b0",
+      "fullId": "1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
       "name": "knowledge-organization-morning",
       "schedule": "0 2 * * *",
       "status": "ok",
@@ -130,20 +141,23 @@
     },
     {
       "id": "f7510f1f",
+      "fullId": "f7510f1f-9db8-46e7-8019-3c9a4858db2e",
       "name": "project-testing-morning",
-      "schedule": "0 3 * * *",
-      "status": "error",
+      "schedule": "0 3 * * * (exact)",
+      "status": "ok",
       "lastRun": "3h ago"
     },
     {
       "id": "77a5bcc6",
+      "fullId": "77a5bcc6-1342-4ff4-836a-f640973006dc",
       "name": "documentation-morning",
-      "schedule": "0 4 * * *",
+      "schedule": "0 4 * * * (exact)",
       "status": "ok",
       "lastRun": "2h ago"
     },
     {
       "id": "f0362050",
+      "fullId": "f0362050-d109-45ca-971b-6cc9cfad90eb",
       "name": "essay-generation-morning",
       "schedule": "0 5 * * *",
       "status": "ok",
@@ -154,125 +168,126 @@
     "total": 56,
     "unique": 56,
     "active24h": 31,
-    "totalTokens": 3311687,
+    "totalTokens": 3338187,
+    "active24hTokens": 2261742,
     "recent": [
       {
         "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
         "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
         "model": "glm-5.3-flash",
-        "totalTokens": 43131,
-        "updatedAt": "1m ago"
+        "totalTokens": 41360,
+        "updatedAt": "6m ago"
       },
       {
-        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:34219b79-6b9a-492a-ad91-8ebd18f9eca9",
-        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:34219b79-6b9a-492a-ad91-8ebd18f9eca9",
+        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:10d5d686-9f73-44a1-b276-4839aadf7601",
+        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:10d5d686-9f73-44a1-b276-4839aadf7601",
         "model": "glm-5.3-flash",
-        "totalTokens": 43131,
-        "updatedAt": "1m ago"
+        "totalTokens": 41360,
+        "updatedAt": "6m ago"
       },
       {
         "key": "agent:main:main",
         "label": "agent:main:main",
         "model": "glm-5",
-        "totalTokens": 146909,
-        "updatedAt": "13m ago"
+        "totalTokens": 156413,
+        "updatedAt": "18m ago"
       },
       {
         "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
         "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
         "model": "glm-5.3-flash",
-        "totalTokens": 57295,
-        "updatedAt": "55m ago"
-      },
-      {
-        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:d68b3e6e-1902-4b17-b743-2cb03c047c76",
-        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:d68b3e6e-1902-4b17-b743-2cb03c047c76",
-        "model": "glm-5.1",
-        "totalTokens": 56467,
+        "totalTokens": 50394,
         "updatedAt": "1h ago"
       },
       {
-        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
-        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
-        "model": "glm-5.3-flash",
-        "totalTokens": 78755,
+        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:a81c95ef-7dd6-42a7-8fed-16280759781e",
+        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:a81c95ef-7dd6-42a7-8fed-16280759781e",
+        "model": "glm-5.1",
+        "totalTokens": 49529,
         "updatedAt": "1h ago"
       },
       {
         "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
         "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
         "model": "glm-5.3-flash",
-        "totalTokens": 67984,
+        "totalTokens": 85465,
+        "updatedAt": "1h ago"
+      },
+      {
+        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:af88139c-724c-4c0a-93bf-fd0ce65ba3a5",
+        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:af88139c-724c-4c0a-93bf-fd0ce65ba3a5",
+        "model": "glm-5.3-flash",
+        "totalTokens": 83953,
         "updatedAt": "2h ago"
       },
       {
-        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:c79c7144-00c5-4c3f-b51f-f92e07380d04",
-        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:c79c7144-00c5-4c3f-b51f-f92e07380d04",
+        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
+        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
         "model": "glm-5.3-flash",
-        "totalTokens": 67984,
+        "totalTokens": 64196,
         "updatedAt": "2h ago"
       },
       {
-        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:d39b9884-0076-49d3-9581-2dc69c2f8dd8",
-        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:d39b9884-0076-49d3-9581-2dc69c2f8dd8",
+        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:5fdaf5d7-f6ac-4d99-b18c-48d29b53f80f",
+        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:5fdaf5d7-f6ac-4d99-b18c-48d29b53f80f",
         "model": "glm-5.3-flash",
-        "totalTokens": 52262,
+        "totalTokens": 63204,
         "updatedAt": "3h ago"
-      },
-      {
-        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
-        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
-        "model": "glm-5.3-flash",
-        "totalTokens": 84742,
-        "updatedAt": "4h ago"
       },
       {
         "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "model": "glm-5.1",
-        "totalTokens": 111039,
+        "totalTokens": 103725,
         "updatedAt": "4h ago"
       },
       {
-        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:c3898e8c-5184-48b1-bd04-b3fa290db070",
-        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:c3898e8c-5184-48b1-bd04-b3fa290db070",
+        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:4e662f51-4593-4659-b75a-90e183a70759",
+        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:4e662f51-4593-4659-b75a-90e183a70759",
         "model": "glm-5.1",
-        "totalTokens": 111039,
+        "totalTokens": 103725,
         "updatedAt": "4h ago"
       },
       {
-        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:50fbdcab-85d0-49ef-9525-2725a2711619",
-        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:50fbdcab-85d0-49ef-9525-2725a2711619",
+        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
+        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
         "model": "glm-5.3-flash",
-        "totalTokens": 82516,
+        "totalTokens": 71051,
+        "updatedAt": "4h ago"
+      },
+      {
+        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:b2f5c5a3-10a8-4c40-8aa1-e69313e422ef",
+        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:b2f5c5a3-10a8-4c40-8aa1-e69313e422ef",
+        "model": "glm-5.3-flash",
+        "totalTokens": 69353,
         "updatedAt": "5h ago"
       },
       {
         "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
         "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
         "model": "glm-5.3-flash",
-        "totalTokens": 110217,
+        "totalTokens": 119899,
         "updatedAt": "5h ago"
       },
       {
-        "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:5098704a-c4c5-461a-9024-a94da2bdcb49",
-        "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:5098704a-c4c5-461a-9024-a94da2bdcb49",
+        "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:18073b82-236f-43f9-9a88-5ebefb127293",
+        "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:18073b82-236f-43f9-9a88-5ebefb127293",
         "model": "glm-5.3-flash",
-        "totalTokens": 107926,
+        "totalTokens": 117440,
         "updatedAt": "6h ago"
       },
       {
         "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "model": "glm-5.3-flash",
-        "totalTokens": 64262,
+        "totalTokens": 104778,
         "updatedAt": "6h ago"
       },
       {
-        "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:0f2b541e-686e-4d90-80e2-a4e3216e8a5b",
-        "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:0f2b541e-686e-4d90-80e2-a4e3216e8a5b",
+        "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:7bf0cfe0-f102-4021-828f-ffc6ad661a16",
+        "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:7bf0cfe0-f102-4021-828f-ffc6ad661a16",
         "model": "glm-5.3-flash",
-        "totalTokens": 62140,
+        "totalTokens": 102547,
         "updatedAt": "7h ago"
       },
       {
@@ -283,8 +298,8 @@
         "updatedAt": "7h ago"
       },
       {
-        "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:a6d4e297-ddea-4e33-bd87-73ab30577841",
-        "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:a6d4e297-ddea-4e33-bd87-73ab30577841",
+        "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:65a798e9-709d-43e4-8235-7128788e65b5",
+        "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:65a798e9-709d-43e4-8235-7128788e65b5",
         "model": "glm-5.1",
         "totalTokens": 71985,
         "updatedAt": "7h ago"
@@ -293,20 +308,21 @@
         "key": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
         "label": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
         "model": "glm-5.3-flash",
-        "totalTokens": 64410,
+        "totalTokens": 68158,
         "updatedAt": "7h ago"
       }
     ]
   },
   "git": {
     "repo": "robertsong2019/openclaw-workspace",
-    "lastCommit": "8a675ca fix: merge memory/2026-09-07 — sotk cycle write had clobbered documentation-morning section (shared daily-file overwrite)",
+    "lastCommit": "fd85c85 memory: punctuation-sweep incident record — error-patterns entry (git add swept foreign worktree hunks, edit fuzzy-match masked it) + daily note",
     "recentCommits": [
-      "8a675ca fix: merge memory/2026-09-07 — sotk cycle write had clobbered documentation-morning section (shared daily-file overwrite)",
-      "9fb973e sotk: C32 consensus zero-valid contract + diff root-branch coverage (571→591, red×3) + daily memory",
-      "6398875 docs: documentation-morning — amg C549-554 catch-up cycle memory",
-      "6ae624e docs(amg): Cycles 549-554 catch-up — 0.540→0.566 (banked 270→283, suite 10271→10312)",
-      "06938d8 docs: C554 knowledge org — HEARTBEAT 队列/状态/近期活动/权威链 c552→c554 + daily memory (amg 0.560→0.566 keeps 935a16c/d73b6e6/39ac859)"
+      "fd85c85 memory: punctuation-sweep incident record — error-patterns entry (git add swept foreign worktree hunks, edit fuzzy-match masked it) + daily note",
+      "fd71bf8 docs(amg): restore fullwidth punctuation swept into 07ca9c3 — keep only intended content edits (Cycles 555-557 section, badge, line 69)",
+      "07ca9c3 docs: documentation-morning — amg C555-557 catch-up (0.566→0.576, README Cycles 555-557 + TUTORIAL §5.7-5.9, badge 10336) + agent-observability README un-stale (91→245 tests, guard-concepts table)",
+      "8c09477 memory+ledger: agent-log F25-F26 cycle — 49→69, 2 red-verified (grep SIGPIPE false-negative, date boundary)",
+      "71b741e agent-log F25-F26: grep false '(no matches)' after SIGPIPE + date end-of-day boundary fixed; sessions/session/find/tail/trend characterization — 49→69 (+20, 2 red-verified)",
+      "65b7ee4 memory: KO 2026-09-08 — C555/C556/C557 0.566→0.576 (suite 10336), counts refresh + Core Projects table un-stale"
     ]
   }
 }
