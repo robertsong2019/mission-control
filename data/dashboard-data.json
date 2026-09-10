@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-09T22:00:53.000Z",
-  "generatedAt": "2026-09-10 06:00 CST",
+  "lastUpdated": "2026-09-10T22:00:29.000Z",
+  "generatedAt": "2026-09-11 06:00 CST",
   "system": {
     "gateway": {
       "status": "running",
@@ -14,8 +14,8 @@
     "host": {
       "os": "Linux 6.8.0-71-generic (x64)",
       "hostname": "VM-0-5-ubuntu",
-      "uptime": "20 weeks, 16 hours, 41 minutes",
-      "loadAverage": "0.84, 0.28, 0.10",
+      "uptime": "20 weeks, 1 day, 16 hours, 40 minutes",
+      "loadAverage": "0.25, 0.11, 0.08",
       "disk": {
         "total": "50G",
         "used": "33G",
@@ -24,23 +24,24 @@
       },
       "memory": {
         "totalMB": 1935,
-        "usedMB": 1448,
-        "freeMB": 326,
-        "availableMB": 487,
+        "usedMB": 984,
+        "freeMB": 364,
+        "availableMB": 951,
         "swapTotalMB": 10179,
-        "swapUsedMB": 808
+        "swapUsedMB": 323
       }
     },
     "model": "zai/glm-5.3-flash"
   },
   "cronSummary": {
     "total": 15,
-    "ok": 12,
-    "error": 2,
+    "ok": 11,
+    "error": 3,
     "running": 1,
     "errorJobs": [
       "84707ade (ai-neuroscience-research)",
-      "b0fd7e8d (key-development-3)"
+      "1ea6e3b0 (knowledge-organization-morning)",
+      "f0362050 (essay-generation-morning)"
     ]
   },
   "cronJobs": [
@@ -129,7 +130,7 @@
       "fullId": "b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
       "name": "key-development-3",
       "schedule": "0 1 * * * (exact)",
-      "status": "error",
+      "status": "ok",
       "lastRun": "5h ago"
     },
     {
@@ -137,7 +138,7 @@
       "fullId": "1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
       "name": "knowledge-organization-morning",
       "schedule": "0 2 * * *",
-      "status": "ok",
+      "status": "error",
       "lastRun": "4h ago"
     },
     {
@@ -161,7 +162,7 @@
       "fullId": "f0362050-d109-45ca-971b-6cc9cfad90eb",
       "name": "essay-generation-morning",
       "schedule": "0 5 * * *",
-      "status": "ok",
+      "status": "error",
       "lastRun": "1h ago"
     }
   ],
@@ -169,126 +170,126 @@
     "total": 56,
     "unique": 56,
     "active24h": 31,
-    "totalTokens": 3133537,
-    "active24hTokens": 2063690,
+    "totalTokens": 3003561,
+    "active24hTokens": 1935142,
     "recent": [
       {
         "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
         "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
         "model": "glm-5.3-flash",
-        "totalTokens": 33702,
-        "updatedAt": "51s ago"
+        "totalTokens": 32999,
+        "updatedAt": "24s ago"
       },
       {
-        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:8dd1cfc2-2ccd-4864-98ee-0d94e1ad5a02",
-        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:8dd1cfc2-2ccd-4864-98ee-0d94e1ad5a02",
+        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:a832075b-db53-4d33-b4a5-61f3f8a1ee14",
+        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:a832075b-db53-4d33-b4a5-61f3f8a1ee14",
         "model": "glm-5.3-flash",
-        "totalTokens": 33702,
-        "updatedAt": "53s ago"
+        "totalTokens": 32999,
+        "updatedAt": "29s ago"
       },
       {
         "key": "agent:main:main",
         "label": "agent:main:main",
         "model": "glm-5",
-        "totalTokens": 81986,
-        "updatedAt": "13m ago"
+        "totalTokens": 97339,
+        "updatedAt": "12m ago"
       },
       {
         "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
         "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
-        "model": "glm-5.3-flash",
-        "totalTokens": 54767,
-        "updatedAt": "56m ago"
+        "model": "glm-5.1",
+        "totalTokens": 53309,
+        "updatedAt": "1h ago"
       },
       {
-        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:58c4a7ba-5c70-4a86-8b1b-e2741e25513b",
-        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:58c4a7ba-5c70-4a86-8b1b-e2741e25513b",
+        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:f3d8135e-f862-4902-bb97-63af8f017f1f",
+        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:f3d8135e-f862-4902-bb97-63af8f017f1f",
         "model": "glm-5.1",
-        "totalTokens": 53971,
+        "totalTokens": 53309,
         "updatedAt": "1h ago"
       },
       {
         "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
         "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
         "model": "glm-5.3-flash",
-        "totalTokens": 67437,
+        "totalTokens": 40363,
         "updatedAt": "2h ago"
       },
       {
-        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:ce8c4113-ed94-4ac6-b1af-a33088f96dd1",
-        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:ce8c4113-ed94-4ac6-b1af-a33088f96dd1",
+        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:2c170b0d-cdaa-4ee9-afd2-bbe31111f79a",
+        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:2c170b0d-cdaa-4ee9-afd2-bbe31111f79a",
         "model": "glm-5.3-flash",
-        "totalTokens": 67437,
+        "totalTokens": 40363,
         "updatedAt": "2h ago"
       },
       {
         "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
         "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
         "model": "glm-5.3-flash",
-        "totalTokens": 66876,
+        "totalTokens": 51781,
         "updatedAt": "2h ago"
       },
       {
-        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:e057e32a-4121-488b-b9e9-ffe2626146dd",
-        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:e057e32a-4121-488b-b9e9-ffe2626146dd",
+        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:147864fd-5f8a-49b5-8e81-0f6d6e1e0571",
+        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:147864fd-5f8a-49b5-8e81-0f6d6e1e0571",
         "model": "glm-5.3-flash",
-        "totalTokens": 65726,
+        "totalTokens": 50563,
         "updatedAt": "3h ago"
-      },
-      {
-        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
-        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
-        "model": "glm-5.3-flash",
-        "totalTokens": 87925,
-        "updatedAt": "4h ago"
       },
       {
         "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "model": "glm-5.1",
-        "totalTokens": 87388,
+        "totalTokens": 54106,
         "updatedAt": "4h ago"
       },
       {
-        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:9db03916-08dd-4c1c-98c7-7540868a710c",
-        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:9db03916-08dd-4c1c-98c7-7540868a710c",
+        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:adfc57df-be7b-4e83-96db-0f6040b4c84f",
+        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:adfc57df-be7b-4e83-96db-0f6040b4c84f",
         "model": "glm-5.1",
-        "totalTokens": 87388,
+        "totalTokens": 54106,
         "updatedAt": "4h ago"
       },
       {
-        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:6b784373-2291-4431-aa00-65468552c14b",
-        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:6b784373-2291-4431-aa00-65468552c14b",
+        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
+        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
         "model": "glm-5.3-flash",
-        "totalTokens": 85832,
+        "totalTokens": 99903,
+        "updatedAt": "4h ago"
+      },
+      {
+        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:77ecaf16-5109-4b7d-9498-2ca42929706a",
+        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:77ecaf16-5109-4b7d-9498-2ca42929706a",
+        "model": "glm-5.3-flash",
+        "totalTokens": 97808,
         "updatedAt": "5h ago"
       },
       {
         "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
         "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
         "model": "glm-5.3-flash",
-        "totalTokens": 99412,
+        "totalTokens": 85295,
         "updatedAt": "5h ago"
       },
       {
-        "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:fc44e02b-208b-497e-9194-82d1866ec8cd",
-        "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:fc44e02b-208b-497e-9194-82d1866ec8cd",
+        "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:de52c835-cbb7-4be6-a0ee-51ab67ff9750",
+        "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:de52c835-cbb7-4be6-a0ee-51ab67ff9750",
         "model": "glm-5.3-flash",
-        "totalTokens": 97468,
+        "totalTokens": 100460,
         "updatedAt": "6h ago"
       },
       {
         "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "model": "glm-5.3-flash",
-        "totalTokens": 102035,
+        "totalTokens": 48442,
         "updatedAt": "6h ago"
       },
       {
-        "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:1920f115-956c-4348-9c75-9e0a1e77fb61",
-        "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:1920f115-956c-4348-9c75-9e0a1e77fb61",
+        "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:369da51c-4401-47c2-aca8-76bffd7e4136",
+        "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:369da51c-4401-47c2-aca8-76bffd7e4136",
         "model": "glm-5.3-flash",
-        "totalTokens": 116747,
+        "totalTokens": 46664,
         "updatedAt": "7h ago"
       },
       {
@@ -299,8 +300,8 @@
         "updatedAt": "7h ago"
       },
       {
-        "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:ca944c68-d05d-450e-ada4-79a1616cd19e",
-        "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:ca944c68-d05d-450e-ada4-79a1616cd19e",
+        "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:44aa4804-f2ca-4ae2-8a24-3d53c1a412e0",
+        "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:44aa4804-f2ca-4ae2-8a24-3d53c1a412e0",
         "model": "glm-5.1",
         "totalTokens": 72932,
         "updatedAt": "7h ago"
@@ -308,22 +309,22 @@
       {
         "key": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
         "label": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
-        "model": "glm-5.1",
-        "totalTokens": 56520,
-        "updatedAt": "8h ago"
+        "model": "glm-5.3-flash",
+        "totalTokens": 58329,
+        "updatedAt": "7h ago"
       }
     ]
   },
   "git": {
     "repo": "robertsong2019/openclaw-workspace",
-    "lastCommit": "77e5c0f docs: amg Cycles 561-563 (0.580->0.594, suite 10413) + tutorial §5.12-5.14 + context-forge F84",
+    "lastCommit": "354347c memory: documentation-morning 09-11 — prompt-mgr F84 fence-safety docs catch-up (3c56bba)",
     "recentCommits": [
-      "77e5c0f docs: amg Cycles 561-563 (0.580->0.594, suite 10413) + tutorial §5.12-5.14 + context-forge F84",
-      "d193391 memory: 09-10 testing cycle note (context-forge F84, 1511->1555)",
-      "88d6701 context-forge F84: guard-clause dead-branch fix (style-A else detection) + 5 analyzer branch coverage tests, 1511->1555",
-      "d719808 knowledge-org: 09-10 day 318 — C561-C563 (banked 0.594, suite 10413) + mission-control 24 / mcp-server 24 / prompt-mgr 403",
-      "caf34e9 C563 ledger: kd-3 daily note (295->297, 0.594)",
-      "5f2109b C563 ledger: experiments.tsv row (295->297, 0.594)"
+      "354347c memory: documentation-morning 09-11 — prompt-mgr F84 fence-safety docs catch-up (3c56bba)",
+      "8aa8bc7 project-testing 09-11: prompt-mgr fence-safety cycle (403->409, red-verified silent-data-loss fix) + acs 68% cov map",
+      "8d81526 C566 ledger: kd-3 daily note (300->301, 0.602) + experiments.tsv row",
+      "f8913c0 amg C566: pin tsv commit hash 31f5f58",
+      "31f5f58 amg C566: activity-span sum route (g) - three-book reading/listening total (f) 300->301 (0.602)",
+      "dd0e603 memory: C565 kd-2 0.600 milestone (have-had entry + finish-sum route)"
     ]
   }
 }
