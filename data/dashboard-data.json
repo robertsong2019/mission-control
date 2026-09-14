@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-13T22:01:23.000Z",
-  "generatedAt": "2026-09-14 06:01 CST",
+  "lastUpdated": "2026-09-14T22:00:39.000Z",
+  "generatedAt": "2026-09-15 06:00 CST",
   "system": {
     "gateway": {
       "status": "running",
@@ -14,8 +14,8 @@
     "host": {
       "os": "Linux 6.8.0-71-generic (x64)",
       "hostname": "VM-0-5-ubuntu",
-      "uptime": "20 weeks, 4 days, 16 hours, 41 minutes",
-      "loadAverage": "0.76, 0.42, 0.25",
+      "uptime": "20 weeks, 5 days, 16 hours, 40 minutes",
+      "loadAverage": "0.39, 0.10, 0.05",
       "disk": {
         "total": "50G",
         "used": "32G",
@@ -24,23 +24,22 @@
       },
       "memory": {
         "totalMB": 1935,
-        "usedMB": 1264,
-        "freeMB": 306,
-        "availableMB": 671,
+        "usedMB": 1302,
+        "freeMB": 271,
+        "availableMB": 633,
         "swapTotalMB": 10179,
-        "swapUsedMB": 342
+        "swapUsedMB": 365
       }
     },
     "model": "zai/glm-5.3-flash"
   },
   "cronSummary": {
     "total": 15,
-    "ok": 12,
-    "error": 2,
+    "ok": 13,
+    "error": 1,
     "running": 1,
     "errorJobs": [
-      "84707ade (ai-neuroscience-research)",
-      "78eac6fc (key-development-1)"
+      "84707ade (ai-neuroscience-research)"
     ]
   },
   "cronJobs": [
@@ -113,7 +112,7 @@
       "fullId": "78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
       "name": "key-development-1",
       "schedule": "0 23 * * * (exact)",
-      "status": "error",
+      "status": "ok",
       "lastRun": "7h ago"
     },
     {
@@ -168,134 +167,127 @@
   "sessions": {
     "total": 57,
     "unique": 57,
-    "active24h": 32,
-    "totalTokens": 3383531,
-    "active24hTokens": 2376346,
+    "active24h": 31,
+    "totalTokens": 3143864,
+    "active24hTokens": 2137885,
     "recent": [
       {
         "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
         "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
         "model": "glm-5.3-flash",
-        "totalTokens": 38241,
-        "updatedAt": "1m ago"
+        "totalTokens": 38090,
+        "updatedAt": "37s ago"
       },
       {
-        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:ed89ea4e-937c-4232-8621-f3117f0e28c0",
-        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:ed89ea4e-937c-4232-8621-f3117f0e28c0",
+        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:02872194-6378-4451-b238-813cfbae8473",
+        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:02872194-6378-4451-b238-813cfbae8473",
         "model": "glm-5.3-flash",
-        "totalTokens": 38241,
-        "updatedAt": "1m ago"
+        "totalTokens": 38090,
+        "updatedAt": "39s ago"
       },
       {
         "key": "agent:main:main",
         "label": "agent:main:main",
         "model": "glm-5",
-        "totalTokens": 129952,
-        "updatedAt": "13m ago"
+        "totalTokens": 141439,
+        "updatedAt": "12m ago"
       },
       {
         "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
         "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
-        "model": "glm-5.1",
-        "totalTokens": 59030,
-        "updatedAt": "1h ago"
+        "model": "glm-5.3-flash",
+        "totalTokens": 53528,
+        "updatedAt": "56m ago"
       },
       {
-        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:54ffe04d-e02b-48e5-a2d2-b0a9a9f86bf3",
-        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:54ffe04d-e02b-48e5-a2d2-b0a9a9f86bf3",
+        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:c59dbfd3-2f79-4110-a12d-d4909fc36e1f",
+        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:c59dbfd3-2f79-4110-a12d-d4909fc36e1f",
         "model": "glm-5.1",
-        "totalTokens": 59030,
+        "totalTokens": 52602,
         "updatedAt": "1h ago"
       },
       {
         "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
         "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
         "model": "glm-5.3-flash",
-        "totalTokens": 53200,
+        "totalTokens": 62795,
         "updatedAt": "2h ago"
       },
       {
-        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:e5289db7-c38f-4fe5-9410-9ead271fceae",
-        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:e5289db7-c38f-4fe5-9410-9ead271fceae",
+        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:ea4e022e-11e8-45b1-8d1d-51b0843923c5",
+        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:ea4e022e-11e8-45b1-8d1d-51b0843923c5",
         "model": "glm-5.3-flash",
-        "totalTokens": 53200,
+        "totalTokens": 62795,
         "updatedAt": "2h ago"
       },
       {
         "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
         "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
         "model": "glm-5.3-flash",
-        "totalTokens": 66598,
+        "totalTokens": 60848,
         "updatedAt": "2h ago"
       },
       {
-        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:7cd495f2-1fdb-494c-ad25-83053f13a8fc",
-        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:7cd495f2-1fdb-494c-ad25-83053f13a8fc",
+        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:75eead44-659a-42c8-be5f-4e4cdc313eac",
+        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:75eead44-659a-42c8-be5f-4e4cdc313eac",
         "model": "glm-5.3-flash",
-        "totalTokens": 65381,
+        "totalTokens": 59133,
         "updatedAt": "3h ago"
       },
       {
         "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "model": "glm-5.1",
-        "totalTokens": 113865,
+        "totalTokens": 122402,
         "updatedAt": "4h ago"
       },
       {
-        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:425a3a8c-0eee-4aab-a850-a86ad72c024c",
-        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:425a3a8c-0eee-4aab-a850-a86ad72c024c",
+        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:d3f42b58-d11a-4ae1-bb6f-3c674821cd1e",
+        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:d3f42b58-d11a-4ae1-bb6f-3c674821cd1e",
         "model": "glm-5.1",
-        "totalTokens": 113865,
+        "totalTokens": 122402,
         "updatedAt": "4h ago"
       },
       {
         "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
         "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
         "model": "glm-5.3-flash",
-        "totalTokens": 101792,
+        "totalTokens": 115781,
         "updatedAt": "4h ago"
       },
       {
-        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:3dcd6a56-fabc-4b4b-a19e-4a627beadb54",
-        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:3dcd6a56-fabc-4b4b-a19e-4a627beadb54",
+        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:ee88ca42-2db4-4918-a85e-797d6ebf9c2f",
+        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:ee88ca42-2db4-4918-a85e-797d6ebf9c2f",
         "model": "glm-5.3-flash",
-        "totalTokens": 99655,
+        "totalTokens": 113876,
         "updatedAt": "5h ago"
       },
       {
         "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
         "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
         "model": "glm-5.3-flash",
-        "totalTokens": 108584,
+        "totalTokens": 74477,
         "updatedAt": "5h ago"
+      },
+      {
+        "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:f463240c-8f7d-4dac-8e22-451bf883bc80",
+        "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:f463240c-8f7d-4dac-8e22-451bf883bc80",
+        "model": "glm-5.3-flash",
+        "totalTokens": 72271,
+        "updatedAt": "6h ago"
       },
       {
         "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "model": "glm-5.3-flash",
-        "totalTokens": 68285,
-        "updatedAt": "5h ago"
-      },
-      {
-        "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:9022dec2-4da5-4f3c-8fc9-bb677c5f07c6",
-        "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:9022dec2-4da5-4f3c-8fc9-bb677c5f07c6",
-        "model": "glm-5.3-flash",
-        "totalTokens": 106772,
+        "totalTokens": 56925,
         "updatedAt": "6h ago"
       },
       {
-        "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:ac2081a4-ff73-484e-b468-6e2861f3d2f8",
-        "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:ac2081a4-ff73-484e-b468-6e2861f3d2f8",
+        "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:45d7a11e-c376-4f23-a0e7-7013be80e52f",
+        "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:45d7a11e-c376-4f23-a0e7-7013be80e52f",
         "model": "glm-5.3-flash",
-        "totalTokens": 109843,
-        "updatedAt": "6h ago"
-      },
-      {
-        "key": "agent:main:feishu:direct:ou_4c5d3e00a26d9d971489a4855f0b6501",
-        "label": "agent:main:feishu:direct:ou_4c5d3e00a26d9d971489a4855f0b6501",
-        "model": "unknown",
-        "totalTokens": 0,
+        "totalTokens": 53828,
         "updatedAt": "7h ago"
       },
       {
@@ -306,24 +298,31 @@
         "updatedAt": "7h ago"
       },
       {
-        "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:04cc8f2d-5fb0-4eeb-af6d-6c973615157e",
-        "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:04cc8f2d-5fb0-4eeb-af6d-6c973615157e",
+        "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:bf899409-9d46-4ee6-a030-c35aae443f37",
+        "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:bf899409-9d46-4ee6-a030-c35aae443f37",
         "model": "glm-5.1",
         "totalTokens": 83584,
+        "updatedAt": "7h ago"
+      },
+      {
+        "key": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
+        "label": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
+        "model": "glm-5.3-flash",
+        "totalTokens": 48735,
         "updatedAt": "7h ago"
       }
     ]
   },
   "git": {
     "repo": "robertsong2019/openclaw-workspace",
-    "lastCommit": "78f3d41 memory: 09-14 essay cron 产物 + 当日条目",
+    "lastCommit": "c9b0e22 amg docs: C574-576 追平（0.622→0.630）— README 新段 + TUTORIAL §5.25-5.27",
     "recentCommits": [
-      "78f3d41 memory: 09-14 essay cron 产物 + 当日条目",
-      "e6f31d0 memory: doc-morning 09-14 daily note (C570-573 docs catch-up)",
-      "f67af1b memory: documentation-morning 09-14 — amg C570-573 docs catch-up (0.610->0.622, badge 10569, TUTORIAL §5.21-§5.24)",
-      "440ba6b testing-cycle 0914: experiments.tsv + memory — langgraph-bridge gateway client hardening (e2f3842)",
-      "e2f3842 langgraph-bridge: gateway client hardening — 3 red-first bugs (falsy-zero timeoutSeconds, unguarded JSON parse, bare fetch error) +11 characterization tests; client coverage 15.2%→100%",
-      "244af44 knowledge-org: 09-14 day 322 — C570-C573 (banked 0.622, suite 10569) + acs 3135; archive 08-28~09-05 focus sections (-43KB)"
+      "c9b0e22 amg docs: C574-576 追平（0.622→0.630）— README 新段 + TUTORIAL §5.25-5.27",
+      "4d34a9f memory: mce cycle 90b4d68 record; test-shape lesson 4th repeat -> permanent TOOLS.md rule (gitignored, local-only)",
+      "90b4d68 mcp-client-explorer: listener survives non-dict JSON stdout lines (RED-first silent-hang fix +8 tests, cov 85.4->93.6)",
+      "3f5230b knowledge-org: 09-15 day 323 — C574-C576 (banked 0.630, suite 10621) + afm 738 + bridge 302; restore clobbered 09-14 sections; archive 09-05~09-10 focus (-24KB)",
+      "8a86986 amg C576: experiments.tsv row (keep) — 314->315 live, replay PASS",
+      "ee183ff amg C576: mention-demand appositive face — banked 0.628->0.630"
     ]
   }
 }
