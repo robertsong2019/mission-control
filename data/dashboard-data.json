@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-14T22:00:39.000Z",
-  "generatedAt": "2026-09-15 06:00 CST",
+  "lastUpdated": "2026-09-15T22:01:24.000Z",
+  "generatedAt": "2026-09-16 06:01 CST",
   "system": {
     "gateway": {
       "status": "running",
@@ -14,8 +14,8 @@
     "host": {
       "os": "Linux 6.8.0-71-generic (x64)",
       "hostname": "VM-0-5-ubuntu",
-      "uptime": "20 weeks, 5 days, 16 hours, 40 minutes",
-      "loadAverage": "0.39, 0.10, 0.05",
+      "uptime": "20 weeks, 6 days, 16 hours, 41 minutes",
+      "loadAverage": "1.13, 0.34, 0.13",
       "disk": {
         "total": "50G",
         "used": "32G",
@@ -24,22 +24,24 @@
       },
       "memory": {
         "totalMB": 1935,
-        "usedMB": 1302,
-        "freeMB": 271,
-        "availableMB": 633,
+        "usedMB": 1401,
+        "freeMB": 228,
+        "availableMB": 534,
         "swapTotalMB": 10179,
-        "swapUsedMB": 365
+        "swapUsedMB": 428
       }
     },
     "model": "zai/glm-5.3-flash"
   },
   "cronSummary": {
     "total": 15,
-    "ok": 13,
-    "error": 1,
+    "ok": 11,
+    "error": 3,
     "running": 1,
     "errorJobs": [
-      "84707ade (ai-neuroscience-research)"
+      "84707ade (ai-neuroscience-research)",
+      "88679f9e (key-development-2)",
+      "b0fd7e8d (key-development-3)"
     ]
   },
   "cronJobs": [
@@ -120,7 +122,7 @@
       "fullId": "88679f9e-ba09-4e1a-8dbd-a2dc12808544",
       "name": "key-development-2",
       "schedule": "0 0 * * * (exact)",
-      "status": "ok",
+      "status": "error",
       "lastRun": "6h ago"
     },
     {
@@ -128,7 +130,7 @@
       "fullId": "b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
       "name": "key-development-3",
       "schedule": "0 1 * * * (exact)",
-      "status": "ok",
+      "status": "error",
       "lastRun": "5h ago"
     },
     {
@@ -168,161 +170,161 @@
     "total": 57,
     "unique": 57,
     "active24h": 31,
-    "totalTokens": 3143864,
-    "active24hTokens": 2137885,
+    "totalTokens": 2994367,
+    "active24hTokens": 1993233,
     "recent": [
       {
         "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
         "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
         "model": "glm-5.3-flash",
-        "totalTokens": 38090,
-        "updatedAt": "37s ago"
+        "totalTokens": 33031,
+        "updatedAt": "1m ago"
       },
       {
-        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:02872194-6378-4451-b238-813cfbae8473",
-        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:02872194-6378-4451-b238-813cfbae8473",
+        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:cfbc9754-dcbe-446e-a7de-d17a280cc23f",
+        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:cfbc9754-dcbe-446e-a7de-d17a280cc23f",
         "model": "glm-5.3-flash",
-        "totalTokens": 38090,
-        "updatedAt": "39s ago"
+        "totalTokens": 33031,
+        "updatedAt": "1m ago"
       },
       {
         "key": "agent:main:main",
         "label": "agent:main:main",
         "model": "glm-5",
-        "totalTokens": 141439,
-        "updatedAt": "12m ago"
+        "totalTokens": 151182,
+        "updatedAt": "13m ago"
       },
       {
         "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
         "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
         "model": "glm-5.3-flash",
-        "totalTokens": 53528,
+        "totalTokens": 51415,
         "updatedAt": "56m ago"
       },
       {
-        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:c59dbfd3-2f79-4110-a12d-d4909fc36e1f",
-        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:c59dbfd3-2f79-4110-a12d-d4909fc36e1f",
+        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:3fcc0eda-18a8-48aa-bf24-4715cf64a2d8",
+        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:3fcc0eda-18a8-48aa-bf24-4715cf64a2d8",
         "model": "glm-5.1",
-        "totalTokens": 52602,
+        "totalTokens": 50592,
         "updatedAt": "1h ago"
       },
       {
         "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
         "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
         "model": "glm-5.3-flash",
-        "totalTokens": 62795,
+        "totalTokens": 59169,
         "updatedAt": "2h ago"
       },
       {
-        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:ea4e022e-11e8-45b1-8d1d-51b0843923c5",
-        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:ea4e022e-11e8-45b1-8d1d-51b0843923c5",
+        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:1043aaf6-a93d-4314-8584-01fa4a4d2584",
+        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:1043aaf6-a93d-4314-8584-01fa4a4d2584",
         "model": "glm-5.3-flash",
-        "totalTokens": 62795,
+        "totalTokens": 59169,
         "updatedAt": "2h ago"
       },
       {
         "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
         "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
         "model": "glm-5.3-flash",
-        "totalTokens": 60848,
+        "totalTokens": 50969,
         "updatedAt": "2h ago"
       },
       {
-        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:75eead44-659a-42c8-be5f-4e4cdc313eac",
-        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:75eead44-659a-42c8-be5f-4e4cdc313eac",
+        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:48bfe427-3bf2-4616-827f-f67a251e8a68",
+        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:48bfe427-3bf2-4616-827f-f67a251e8a68",
         "model": "glm-5.3-flash",
-        "totalTokens": 59133,
+        "totalTokens": 49564,
+        "updatedAt": "3h ago"
+      },
+      {
+        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
+        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
+        "model": "glm-5.3-flash",
+        "totalTokens": 111380,
         "updatedAt": "3h ago"
       },
       {
         "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "model": "glm-5.1",
-        "totalTokens": 122402,
+        "totalTokens": 87602,
         "updatedAt": "4h ago"
       },
       {
-        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:d3f42b58-d11a-4ae1-bb6f-3c674821cd1e",
-        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:d3f42b58-d11a-4ae1-bb6f-3c674821cd1e",
+        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:85509836-a279-4ffd-8c5f-0efcd930ea3b",
+        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:85509836-a279-4ffd-8c5f-0efcd930ea3b",
         "model": "glm-5.1",
-        "totalTokens": 122402,
+        "totalTokens": 87602,
         "updatedAt": "4h ago"
       },
       {
-        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
-        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
+        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:ecfb18f0-a8ff-4632-a7fe-65c39adee688",
+        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:ecfb18f0-a8ff-4632-a7fe-65c39adee688",
         "model": "glm-5.3-flash",
         "totalTokens": 115781,
         "updatedAt": "4h ago"
       },
       {
-        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:ee88ca42-2db4-4918-a85e-797d6ebf9c2f",
-        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:ee88ca42-2db4-4918-a85e-797d6ebf9c2f",
-        "model": "glm-5.3-flash",
-        "totalTokens": 113876,
-        "updatedAt": "5h ago"
-      },
-      {
         "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
         "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
+        "model": "glm-5.3-flash",
+        "totalTokens": 69521,
+        "updatedAt": "4h ago"
+      },
+      {
+        "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:34ea2d95-23a3-4d1e-baf7-b6d243579b2e",
+        "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:34ea2d95-23a3-4d1e-baf7-b6d243579b2e",
         "model": "glm-5.3-flash",
         "totalTokens": 74477,
         "updatedAt": "5h ago"
       },
       {
-        "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:f463240c-8f7d-4dac-8e22-451bf883bc80",
-        "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:f463240c-8f7d-4dac-8e22-451bf883bc80",
-        "model": "glm-5.3-flash",
-        "totalTokens": 72271,
-        "updatedAt": "6h ago"
-      },
-      {
         "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "model": "glm-5.3-flash",
-        "totalTokens": 56925,
+        "totalTokens": 58185,
         "updatedAt": "6h ago"
       },
       {
-        "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:45d7a11e-c376-4f23-a0e7-7013be80e52f",
-        "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:45d7a11e-c376-4f23-a0e7-7013be80e52f",
+        "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:a7c3babd-f41a-4ea8-b3b6-3da8183b0b4b",
+        "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:a7c3babd-f41a-4ea8-b3b6-3da8183b0b4b",
         "model": "glm-5.3-flash",
-        "totalTokens": 53828,
+        "totalTokens": 56794,
         "updatedAt": "7h ago"
       },
       {
         "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781",
         "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781",
         "model": "glm-5.1",
-        "totalTokens": 83584,
+        "totalTokens": 67953,
         "updatedAt": "7h ago"
       },
       {
-        "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:bf899409-9d46-4ee6-a030-c35aae443f37",
-        "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:bf899409-9d46-4ee6-a030-c35aae443f37",
+        "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:56d9809d-6bfd-4d19-be0b-4086d2425f66",
+        "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:56d9809d-6bfd-4d19-be0b-4086d2425f66",
         "model": "glm-5.1",
-        "totalTokens": 83584,
+        "totalTokens": 67953,
         "updatedAt": "7h ago"
       },
       {
         "key": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
         "label": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
-        "model": "glm-5.3-flash",
-        "totalTokens": 48735,
-        "updatedAt": "7h ago"
+        "model": "glm-5.1",
+        "totalTokens": 58581,
+        "updatedAt": "8h ago"
       }
     ]
   },
   "git": {
     "repo": "robertsong2019/openclaw-workspace",
-    "lastCommit": "c9b0e22 amg docs: C574-576 追平（0.622→0.630）— README 新段 + TUTORIAL §5.25-5.27",
+    "lastCommit": "b483ebe amg docs: C577-579 追平（0.630→0.648）— README badge 10676 + Cycles 577-579 段 + TUTORIAL §5.28-5.30 + 原则第 11 条",
     "recentCommits": [
-      "c9b0e22 amg docs: C574-576 追平（0.622→0.630）— README 新段 + TUTORIAL §5.25-5.27",
-      "4d34a9f memory: mce cycle 90b4d68 record; test-shape lesson 4th repeat -> permanent TOOLS.md rule (gitignored, local-only)",
-      "90b4d68 mcp-client-explorer: listener survives non-dict JSON stdout lines (RED-first silent-hang fix +8 tests, cov 85.4->93.6)",
-      "3f5230b knowledge-org: 09-15 day 323 — C574-C576 (banked 0.630, suite 10621) + afm 738 + bridge 302; restore clobbered 09-14 sections; archive 09-05~09-10 focus (-24KB)",
-      "8a86986 amg C576: experiments.tsv row (keep) — 314->315 live, replay PASS",
-      "ee183ff amg C576: mention-demand appositive face — banked 0.628->0.630"
+      "b483ebe amg docs: C577-579 追平（0.630→0.648）— README badge 10676 + Cycles 577-579 段 + TUTORIAL §5.28-5.30 + 原则第 11 条",
+      "62afcd9 memory: kd-3 C579 reltime-anchor face +5 banked (0.648, 15连keep)",
+      "0653598 C579 tsv: kd-3 reltime-anchor face experiment record (+5 banked 0.638->0.648)",
+      "00966e8 C579 reltime-anchor face (kd-3): relative-time offset -> target date -> realized demand markers, +5 banked",
+      "69a2919 knowledge-org: 09-16 day 325 — C577/C578 (banked 0.638, suite 10657, 14连keep) + atc R76 1879 + prompt-mgr 432 + mcx 54; archive 09-10~09-14 focus (-8.4KB); Core Projects 表 6 处陈旧修正",
+      "b2ee79a memory: kd-2 C578 — list-recall face keep (banked 0.638, 3-qid payoff), 14连keep"
     ]
   }
 }
