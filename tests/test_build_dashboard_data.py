@@ -193,3 +193,177 @@ class TestParseMeminfo(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+# ---------- main() integration (fake sh / sessions.json / NOW_MS) ----------
+
+import io as _io
+import json as _json
+from unittest import mock
+
+import build_dashboard_data as bdd
+
+MEMINFO = (
+    "MemTotal:       16384 kB\n"
+    "MemFree:         2048 kB\n"
+    "MemAvailable:    8192 kB\n"
+    "SwapTotal:       4096 kB\n"
+    "SwapFree:       1024 kB\n"
+)
+
+NOW_MS_FIXED = 1_000_000_000_000  # ms
+
+
+def _fake_sh_factory(cron_out):
+    table = {
+        "openclaw cron list 2>/dev/null": cron_out,
+        "uptime -p": "up 5 days, 2:14",
+        "cat /proc/loadavg": "0.52 0.58 0.59 1/123 4567",
+        "df -h /": "Filesystem      Size  Used Avail Use% Mounted on\n"
+                   "/dev/vda1        40G   12G   28G  31% /",
+        "cat /proc/meminfo": MEMINFO,
+        "node --version": "v22.22.1",
+        "git log -1 --format='%h %s'": "abc1234 last commit subject",
+        "git log -6 --format='%h %s'": "abc1234 c6\nbbb2222 c5",
+    }
+
+    def fake_sh(cmd, cwd=None):
+        return table.get(cmd, "")
+
+    return fake_sh
+
+
+class TestShReal(unittest.TestCase):
+    """sh() real contract: shell=True, stdout-only, stripped, rc ignored."""
+
+    def test_runs_shell_command_and_strips(self):
+        self.assertEqual(bdd.sh("echo '  hi  '"), "hi")
+
+    def test_stdout_only_stderr_discarded(self):
+        self.assertEqual(bdd.sh("echo out; echo err 1>&2"), "out")
+
+    def test_nonzero_exit_returns_stdout_no_raise(self):
+        self.assertEqual(bdd.sh("echo partial; exit 1"), "partial")
+        self.assertEqual(bdd.sh("exit 1"), "")
+
+    def test_cwd_is_honored(self):
+        self.assertEqual(
+            bdd.sh("pwd", cwd=os.path.dirname(os.path.dirname(
+                os.path.abspath(__file__)))),
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
+class TestMainIntegration(unittest.TestCase):
+    def setUp(self):
+        # snapshot + protect the real generated artifact
+        self.out_path = os.path.join(
+            os.path.dirname(os.path.abspath(bdd.__file__)),
+            "data", "dashboard-data.json")
+        self.backup = None
+        if os.path.exists(self.out_path):
+            with open(self.out_path, "rb") as f:
+                self.backup = f.read()
+
+    def tearDown(self):
+        if self.backup is not None:
+            with open(self.out_path, "wb") as f:
+                f.write(self.backup)
+        elif os.path.exists(self.out_path):
+            os.remove(self.out_path)
+
+    def run_main(self, cron_out, sessions_store):
+        payload = _json.dumps(sessions_store)
+        real_open = open
+
+        def fake_open(path, *a, **k):
+            if "sessions.json" in str(path):
+                return _io.StringIO(payload)
+            return real_open(path, *a, **k)
+
+        with mock.patch.object(bdd, "sh", new=_fake_sh_factory(cron_out)), \
+             mock.patch.object(bdd, "NOW_MS", new=NOW_MS_FIXED), \
+             mock.patch("builtins.open", new=fake_open):
+            bdd.main()
+
+        with real_open(self.out_path) as f:
+            return _json.load(f)
+
+    def _store(self, *entries):
+        # entries: (key, model, totalTokens, updatedAtMs)
+        return {
+            k: {"model": m, "totalTokens": t, "updatedAt": u}
+            for k, m, t, u in entries
+        }
+
+    def test_cron_summary_counts_and_error_jobs(self):
+        cron_out = "\n".join([HEADER, ROW_CRON, ROW_GLUED, ROW_TZ, ROW_EVERY])
+        data = self.run_main(
+            cron_out,
+            self._store(("s1", "m1", 100, NOW_MS_FIXED - 3600_000)))
+        cs = data["cronSummary"]
+        self.assertEqual(cs["total"], 4)
+        self.assertEqual(cs["ok"], 2)       # GLUED + EVERY
+        self.assertEqual(cs["error"], 1)    # TZ
+        self.assertEqual(cs["running"], 1)  # CRON
+        self.assertEqual(cs["errorJobs"], ["cccc4444 (tz-job)"])
+        self.assertEqual(len(data["cronJobs"]), 4)
+
+    def test_sessions_active24_window_and_token_sums(self):
+        cron_out = HEADER
+        store = self._store(
+            ("recent-sess", "glm-a", 500, NOW_MS_FIXED - 1 * 3600_000),    # in 24h
+            ("edge-sess", "glm-b", 200, NOW_MS_FIXED - 24 * 3600_000),     # boundary: <= 24h counts
+            ("stale-sess", "glm-c", 300, NOW_MS_FIXED - 30 * 3600_000),    # out
+        )
+        data = self.run_main(cron_out, store)
+        s = data["sessions"]
+        self.assertEqual(s["total"], 3)
+        self.assertEqual(s["unique"], 3)
+        self.assertEqual(s["active24h"], 2)      # recent + boundary
+        self.assertEqual(s["totalTokens"], 1000)
+        self.assertEqual(s["active24hTokens"], 700)
+        recent_keys = [r["key"] for r in s["recent"]]
+        self.assertEqual(recent_keys[0], "recent-sess")  # newest first
+
+    def test_memory_and_disk_math_in_output(self):
+        cron_out = HEADER
+        data = self.run_main(
+            cron_out,
+            self._store(("s1", "m1", 0, NOW_MS_FIXED)))
+        host = data["system"]["host"]
+        self.assertEqual(host["memory"]["totalMB"], 16)
+        self.assertEqual(host["memory"]["availableMB"], 8)
+        self.assertEqual(host["memory"]["usedMB"], 8)     # (16384-8192)//1024
+        self.assertEqual(host["memory"]["freeMB"], 2)
+        self.assertEqual(host["memory"]["swapTotalMB"], 4)
+        self.assertEqual(host["memory"]["swapUsedMB"], 3)  # (4096-1024)//1024
+        disk = host["disk"]
+        self.assertEqual(disk["usage"], "31%")
+        self.assertEqual(disk["available"], "28G")
+        self.assertEqual(host["loadAverage"], "0.52, 0.58, 0.59")
+
+    def test_recent_capped_at_20(self):
+        cron_out = HEADER
+        store = self._store(*[
+            (f"s{i}", "glm", i, NOW_MS_FIXED - i * 1000) for i in range(25)
+        ])
+        data = self.run_main(cron_out, store)
+        self.assertEqual(len(data["sessions"]["recent"]), 20)
+        # newest-first ordering
+        self.assertEqual(data["sessions"]["recent"][0]["key"], "s0")
+        self.assertEqual(data["sessions"]["recent"][19]["key"], "s19")
+
+    def test_git_section_and_written_shape(self):
+        cron_out = "\n".join([HEADER, ROW_CRON])
+        data = self.run_main(
+            cron_out, self._store(("s1", "m1", 1, NOW_MS_FIXED)))
+        git = data["git"]
+        self.assertEqual(git["lastCommit"], "abc1234 last commit subject")
+        self.assertEqual(git["recentCommits"], ["abc1234 c6", "bbb2222 c5"])
+        self.assertEqual(data["system"]["gateway"]["status"], "running")
+        self.assertEqual(data["cronSummary"]["total"], 1)
+        self.assertRegex(data["lastUpdated"], r"^\d{4}-\d{2}-\d{2}T")
+        self.assertRegex(data["generatedAt"], r"\d{4}-\d{2}-\d{2} \d{2}:\d{2} CST$")
+
+
+if __name__ == "__main__":
+    unittest.main()
