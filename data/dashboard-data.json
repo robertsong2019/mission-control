@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-18T22:01:03.000Z",
-  "generatedAt": "2026-09-19 06:01 CST",
+  "lastUpdated": "2026-09-19T22:01:13.000Z",
+  "generatedAt": "2026-09-20 06:01 CST",
   "system": {
     "gateway": {
       "status": "running",
@@ -14,8 +14,8 @@
     "host": {
       "os": "Linux 6.8.0-71-generic (x64)",
       "hostname": "VM-0-5-ubuntu",
-      "uptime": "21 weeks, 2 days, 16 hours, 41 minutes",
-      "loadAverage": "0.35, 0.11, 0.05",
+      "uptime": "21 weeks, 3 days, 16 hours, 41 minutes",
+      "loadAverage": "0.82, 0.24, 0.08",
       "disk": {
         "total": "50G",
         "used": "32G",
@@ -24,23 +24,24 @@
       },
       "memory": {
         "totalMB": 1935,
-        "usedMB": 1433,
-        "freeMB": 315,
-        "availableMB": 502,
+        "usedMB": 1470,
+        "freeMB": 241,
+        "availableMB": 465,
         "swapTotalMB": 10179,
-        "swapUsedMB": 776
+        "swapUsedMB": 770
       }
     },
     "model": "zai/glm-5.3-flash"
   },
   "cronSummary": {
     "total": 15,
-    "ok": 12,
-    "error": 2,
+    "ok": 11,
+    "error": 3,
     "running": 1,
     "errorJobs": [
       "84707ade (ai-neuroscience-research)",
-      "88679f9e (key-development-2)"
+      "88679f9e (key-development-2)",
+      "b0fd7e8d (key-development-3)"
     ]
   },
   "cronJobs": [
@@ -129,7 +130,7 @@
       "fullId": "b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
       "name": "key-development-3",
       "schedule": "0 1 * * * (exact)",
-      "status": "ok",
+      "status": "error",
       "lastRun": "5h ago"
     },
     {
@@ -169,89 +170,96 @@
     "total": 58,
     "unique": 58,
     "active24h": 31,
-    "totalTokens": 3400261,
-    "active24hTokens": 2335497,
+    "totalTokens": 3222709,
+    "active24hTokens": 2158525,
     "recent": [
       {
         "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
         "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
         "model": "glm-5.3-flash",
-        "totalTokens": 32912,
+        "totalTokens": 32359,
         "updatedAt": "1m ago"
       },
       {
-        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:ed6439bd-9ac1-40b5-8db5-cc975f6908c3",
-        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:ed6439bd-9ac1-40b5-8db5-cc975f6908c3",
+        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:dc3f94e7-5da1-431d-9cd5-9bda66da532e",
+        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:dc3f94e7-5da1-431d-9cd5-9bda66da532e",
         "model": "glm-5.3-flash",
-        "totalTokens": 32912,
+        "totalTokens": 32359,
         "updatedAt": "1m ago"
       },
       {
         "key": "agent:main:main",
         "label": "agent:main:main",
         "model": "glm-5",
-        "totalTokens": 182743,
+        "totalTokens": 84382,
         "updatedAt": "13m ago"
       },
       {
         "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
         "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
-        "model": "glm-5.1",
-        "totalTokens": 52768,
-        "updatedAt": "1h ago"
+        "model": "glm-5.3-flash",
+        "totalTokens": 50233,
+        "updatedAt": "56m ago"
       },
       {
-        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:9834e1a5-7126-45ca-ac4a-ad05531211a8",
-        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:9834e1a5-7126-45ca-ac4a-ad05531211a8",
+        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:1aa3adaa-5d22-49bb-95b0-2cae15c39f5f",
+        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:1aa3adaa-5d22-49bb-95b0-2cae15c39f5f",
         "model": "glm-5.1",
-        "totalTokens": 52768,
+        "totalTokens": 49325,
         "updatedAt": "1h ago"
       },
       {
         "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
         "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
         "model": "glm-5.3-flash",
-        "totalTokens": 75782,
+        "totalTokens": 84110,
         "updatedAt": "2h ago"
       },
       {
-        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:8c3ba838-ae41-4e5f-8033-442e537ac562",
-        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:8c3ba838-ae41-4e5f-8033-442e537ac562",
+        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:9743b0ec-fb86-4630-989a-817a7df45274",
+        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:9743b0ec-fb86-4630-989a-817a7df45274",
         "model": "glm-5.3-flash",
-        "totalTokens": 75782,
+        "totalTokens": 84110,
         "updatedAt": "2h ago"
       },
       {
         "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
         "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
         "model": "glm-5.3-flash",
-        "totalTokens": 60427,
+        "totalTokens": 65837,
         "updatedAt": "3h ago"
       },
       {
-        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:f11bb53a-4cba-4b54-9475-e0b2c3c6e2ff",
-        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:f11bb53a-4cba-4b54-9475-e0b2c3c6e2ff",
+        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:615c5f81-c91a-4a7b-ae43-1acbb2edb857",
+        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:615c5f81-c91a-4a7b-ae43-1acbb2edb857",
         "model": "glm-5.3-flash",
-        "totalTokens": 60427,
+        "totalTokens": 65837,
+        "updatedAt": "3h ago"
+      },
+      {
+        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
+        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
+        "model": "glm-5.3-flash",
+        "totalTokens": 114963,
         "updatedAt": "3h ago"
       },
       {
         "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "model": "glm-5.1",
-        "totalTokens": 105652,
+        "totalTokens": 91056,
         "updatedAt": "4h ago"
       },
       {
-        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:76fc981d-057c-424b-abd2-de9780a91d34",
-        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:76fc981d-057c-424b-abd2-de9780a91d34",
+        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:ec281b3a-7032-4cf0-9056-af4984a3c688",
+        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:ec281b3a-7032-4cf0-9056-af4984a3c688",
         "model": "glm-5.1",
-        "totalTokens": 105652,
+        "totalTokens": 91056,
         "updatedAt": "4h ago"
       },
       {
-        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
-        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
+        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:ef1c8c38-afc7-4af2-95c5-a8d55cfa1c3f",
+        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:ef1c8c38-afc7-4af2-95c5-a8d55cfa1c3f",
         "model": "glm-5.3-flash",
         "totalTokens": 120030,
         "updatedAt": "4h ago"
@@ -260,70 +268,63 @@
         "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
         "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
         "model": "glm-5.3-flash",
-        "totalTokens": 105688,
-        "updatedAt": "4h ago"
-      },
-      {
-        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:1407973e-f948-4f96-9ae3-d2dc617cdab9",
-        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:1407973e-f948-4f96-9ae3-d2dc617cdab9",
-        "model": "glm-5.3-flash",
-        "totalTokens": 117770,
+        "totalTokens": 85584,
         "updatedAt": "5h ago"
       },
       {
-        "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:2f501061-7dbe-4f03-8fc5-d1f67291056a",
-        "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:2f501061-7dbe-4f03-8fc5-d1f67291056a",
+        "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:fa7b451a-75a6-4bdc-8ee1-fb63df28a6b8",
+        "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:fa7b451a-75a6-4bdc-8ee1-fb63df28a6b8",
         "model": "glm-5.3-flash",
-        "totalTokens": 128658,
-        "updatedAt": "5h ago"
+        "totalTokens": 83811,
+        "updatedAt": "6h ago"
       },
       {
         "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "model": "glm-5.3-flash",
-        "totalTokens": 93267,
+        "totalTokens": 98333,
         "updatedAt": "6h ago"
       },
       {
-        "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:e3a7bef6-7c4e-48e2-8c43-07cd19c2632e",
-        "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:e3a7bef6-7c4e-48e2-8c43-07cd19c2632e",
+        "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:e7b80dce-1b37-4958-80df-9833cfce7cab",
+        "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:e7b80dce-1b37-4958-80df-9833cfce7cab",
         "model": "glm-5.3-flash",
-        "totalTokens": 91485,
+        "totalTokens": 96452,
         "updatedAt": "7h ago"
       },
       {
         "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781",
         "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781",
         "model": "glm-5.1",
-        "totalTokens": 54781,
+        "totalTokens": 64479,
         "updatedAt": "7h ago"
       },
       {
-        "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:bf0ca30a-da0c-4efe-acec-cf5fb3d2c909",
-        "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:bf0ca30a-da0c-4efe-acec-cf5fb3d2c909",
+        "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:3fae0f1e-1230-4734-8ba8-6057cf64607c",
+        "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:3fae0f1e-1230-4734-8ba8-6057cf64607c",
         "model": "glm-5.1",
-        "totalTokens": 54781,
+        "totalTokens": 64479,
         "updatedAt": "7h ago"
       },
       {
         "key": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
         "label": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
         "model": "glm-5.1",
-        "totalTokens": 56797,
+        "totalTokens": 54356,
         "updatedAt": "8h ago"
       }
     ]
   },
   "git": {
     "repo": "robertsong2019/openclaw-workspace",
-    "lastCommit": "df53030 amg docs: C586-588 追平（0.664→0.672）— README badge 10813 + Cycles 586-588 段 + TUTORIAL §5.37-5.39 + 原则第 15/16 条",
+    "lastCommit": "a54ba49 memory: 09-20 essay 产物 + 台账（render-form judge contract, f6a4c94）",
     "recentCommits": [
-      "df53030 amg docs: C586-588 追平（0.664→0.672）— README badge 10813 + Cycles 586-588 段 + TUTORIAL §5.37-5.39 + 原则第 15/16 条",
-      "86df9b7 C589: experiments.tsv row (25a476e keep, jp 18→49 tests, 2 red-verified bugs) + daily memory",
-      "0bbc37f knowledge-org: integrate C586-C588 (0.672, 24-keep) + archive 08-12~08-27 sections (MEMORY 219KB->140KB)",
-      "7957cfd memory: C588 kd-3 record (most-recent-trip face, 335->336, 24连keep)",
-      "4295f26 C588: experiments.tsv row (16623bf keep, banked 0.672, 24连)",
-      "16623bf C588: most-recent-trip destination face — 9ea5eabc banked 335->336 (0.670->0.672, 23->24连keep)"
+      "a54ba49 memory: 09-20 essay 产物 + 台账（render-form judge contract, f6a4c94）",
+      "18244e6 doc memory 修正: 76d3387 实为单 commit + error-patterns 记 staging 顺序失误（第 1 例）",
+      "76d3387 amg docs: C589-591 追平（0.672→0.682）— README badge 10870 + Cycles 589-591 段 + TUTORIAL §5.40-5.42 + 原则第 17 条",
+      "57d1b39 project-testing: pocket-agent cycle record (65->72, cov 78->98%, import non-callable guard) + 09-20 memory",
+      "358ce4a pocket-agent: demo/main integration tests + import_state non-callable guard (65->72, cov 78->98%)",
+      "e101057 C591 memory: kd-3 event-count double head keep (banked 341/0.682, 27 consecutive), double-judge render lesson"
     ]
   }
 }
