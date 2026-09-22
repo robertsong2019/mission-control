@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-21T22:00:31.000Z",
-  "generatedAt": "2026-09-22 06:00 CST",
+  "lastUpdated": "2026-09-22T19:04:24.000Z",
+  "generatedAt": "2026-09-23 03:04 CST",
   "system": {
     "gateway": {
       "status": "running",
@@ -14,140 +14,42 @@
     "host": {
       "os": "Linux 6.8.0-71-generic (x64)",
       "hostname": "VM-0-5-ubuntu",
-      "uptime": "21 weeks, 5 days, 16 hours, 40 minutes",
-      "loadAverage": "0.09, 0.04, 0.05",
+      "uptime": "21 weeks, 6 days, 13 hours, 44 minutes",
+      "loadAverage": "0.08, 0.02, 0.01",
       "disk": {
         "total": "50G",
         "used": "32G",
         "available": "16G",
-        "usage": "69%"
+        "usage": "68%"
       },
       "memory": {
         "totalMB": 1935,
-        "usedMB": 1065,
-        "freeMB": 267,
-        "availableMB": 869,
+        "usedMB": 1300,
+        "freeMB": 282,
+        "availableMB": 635,
         "swapTotalMB": 10179,
-        "swapUsedMB": 361
+        "swapUsedMB": 1065
       }
     },
     "model": "zai/glm-5.3-flash"
   },
   "cronSummary": {
     "total": 15,
-    "ok": 11,
-    "error": 3,
+    "ok": 13,
+    "error": 1,
     "running": 1,
     "errorJobs": [
-      "84707ade (ai-neuroscience-research)",
-      "78eac6fc (key-development-1)",
-      "88679f9e (key-development-2)"
+      "84707ade (ai-neuroscience-research)"
     ]
   },
   "cronJobs": [
-    {
-      "id": "f38e0365",
-      "fullId": "f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
-      "name": "dashboard-update-morning",
-      "schedule": "0 6 * * * (exact)",
-      "status": "running",
-      "lastRun": "1d ago"
-    },
-    {
-      "id": "9b2a8701",
-      "fullId": "9b2a8701-ab69-49b0-bef4-d9ef6d7ecf9e",
-      "name": "github-trending-daily",
-      "schedule": "0 7 * * *",
-      "status": "ok",
-      "lastRun": "23h ago"
-    },
-    {
-      "id": "2c714952",
-      "fullId": "2c714952-04af-4192-8e0a-95758dcbb3db",
-      "name": "github-trending-deep-analysis",
-      "schedule": "0 8 * * *",
-      "status": "ok",
-      "lastRun": "22h ago"
-    },
-    {
-      "id": "ad37c59a",
-      "fullId": "ad37c59a-6265-4e29-b372-71788835afbf",
-      "name": "github-creative-evening",
-      "schedule": "0 19 * * *",
-      "status": "ok",
-      "lastRun": "11h ago"
-    },
-    {
-      "id": "a4bf5e2a",
-      "fullId": "a4bf5e2a-a7ba-4e00-a8a5-fb3b03d6fd66",
-      "name": "deep-exploration-evening",
-      "schedule": "0 20 * * *",
-      "status": "ok",
-      "lastRun": "10h ago"
-    },
-    {
-      "id": "13a2f284",
-      "fullId": "13a2f284-a1ed-4394-979a-5392fbdf50f7",
-      "name": "code-lab-evening",
-      "schedule": "0 21 * * * (exact)",
-      "status": "ok",
-      "lastRun": "9h ago"
-    },
-    {
-      "id": "62bf7f3b",
-      "fullId": "62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
-      "name": "tool-development-evening",
-      "schedule": "0 22 * * *",
-      "status": "ok",
-      "lastRun": "8h ago"
-    },
-    {
-      "id": "84707ade",
-      "fullId": "84707ade-1c71-4b06-af17-05e62a021781",
-      "name": "ai-neuroscience-research",
-      "schedule": "30 22 * * *",
-      "status": "error",
-      "lastRun": "8h ago"
-    },
-    {
-      "id": "78eac6fc",
-      "fullId": "78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
-      "name": "key-development-1",
-      "schedule": "0 23 * * * (exact)",
-      "status": "error",
-      "lastRun": "7h ago"
-    },
-    {
-      "id": "88679f9e",
-      "fullId": "88679f9e-ba09-4e1a-8dbd-a2dc12808544",
-      "name": "key-development-2",
-      "schedule": "0 0 * * * (exact)",
-      "status": "error",
-      "lastRun": "6h ago"
-    },
-    {
-      "id": "b0fd7e8d",
-      "fullId": "b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
-      "name": "key-development-3",
-      "schedule": "0 1 * * * (exact)",
-      "status": "ok",
-      "lastRun": "5h ago"
-    },
-    {
-      "id": "1ea6e3b0",
-      "fullId": "1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
-      "name": "knowledge-organization-morning",
-      "schedule": "0 2 * * *",
-      "status": "ok",
-      "lastRun": "4h ago"
-    },
     {
       "id": "f7510f1f",
       "fullId": "f7510f1f-9db8-46e7-8019-3c9a4858db2e",
       "name": "project-testing-morning",
       "schedule": "0 3 * * * (exact)",
-      "status": "ok",
-      "lastRun": "3h ago"
+      "status": "running",
+      "lastRun": "1d ago"
     },
     {
       "id": "77a5bcc6",
@@ -155,7 +57,7 @@
       "name": "documentation-morning",
       "schedule": "0 4 * * * (exact)",
       "status": "ok",
-      "lastRun": "2h ago"
+      "lastRun": "23h ago"
     },
     {
       "id": "f0362050",
@@ -163,168 +65,264 @@
       "name": "essay-generation-morning",
       "schedule": "0 5 * * *",
       "status": "ok",
+      "lastRun": "22h ago"
+    },
+    {
+      "id": "f38e0365",
+      "fullId": "f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
+      "name": "dashboard-update-morning",
+      "schedule": "0 6 * * * (exact)",
+      "status": "ok",
+      "lastRun": "21h ago"
+    },
+    {
+      "id": "9b2a8701",
+      "fullId": "9b2a8701-ab69-49b0-bef4-d9ef6d7ecf9e",
+      "name": "github-trending-daily",
+      "schedule": "0 7 * * *",
+      "status": "ok",
+      "lastRun": "20h ago"
+    },
+    {
+      "id": "2c714952",
+      "fullId": "2c714952-04af-4192-8e0a-95758dcbb3db",
+      "name": "github-trending-deep-analysis",
+      "schedule": "0 8 * * *",
+      "status": "ok",
+      "lastRun": "19h ago"
+    },
+    {
+      "id": "ad37c59a",
+      "fullId": "ad37c59a-6265-4e29-b372-71788835afbf",
+      "name": "github-creative-evening",
+      "schedule": "0 19 * * *",
+      "status": "ok",
+      "lastRun": "8h ago"
+    },
+    {
+      "id": "a4bf5e2a",
+      "fullId": "a4bf5e2a-a7ba-4e00-a8a5-fb3b03d6fd66",
+      "name": "deep-exploration-evening",
+      "schedule": "0 20 * * *",
+      "status": "ok",
+      "lastRun": "7h ago"
+    },
+    {
+      "id": "13a2f284",
+      "fullId": "13a2f284-a1ed-4394-979a-5392fbdf50f7",
+      "name": "code-lab-evening",
+      "schedule": "0 21 * * * (exact)",
+      "status": "ok",
+      "lastRun": "6h ago"
+    },
+    {
+      "id": "62bf7f3b",
+      "fullId": "62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
+      "name": "tool-development-evening",
+      "schedule": "0 22 * * *",
+      "status": "ok",
+      "lastRun": "5h ago"
+    },
+    {
+      "id": "84707ade",
+      "fullId": "84707ade-1c71-4b06-af17-05e62a021781",
+      "name": "ai-neuroscience-research",
+      "schedule": "30 22 * * *",
+      "status": "error",
+      "lastRun": "5h ago"
+    },
+    {
+      "id": "78eac6fc",
+      "fullId": "78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
+      "name": "key-development-1",
+      "schedule": "0 23 * * * (exact)",
+      "status": "ok",
+      "lastRun": "4h ago"
+    },
+    {
+      "id": "88679f9e",
+      "fullId": "88679f9e-ba09-4e1a-8dbd-a2dc12808544",
+      "name": "key-development-2",
+      "schedule": "0 0 * * * (exact)",
+      "status": "ok",
+      "lastRun": "3h ago"
+    },
+    {
+      "id": "b0fd7e8d",
+      "fullId": "b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
+      "name": "key-development-3",
+      "schedule": "0 1 * * * (exact)",
+      "status": "ok",
+      "lastRun": "2h ago"
+    },
+    {
+      "id": "1ea6e3b0",
+      "fullId": "1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
+      "name": "knowledge-organization-morning",
+      "schedule": "0 2 * * *",
+      "status": "ok",
       "lastRun": "1h ago"
     }
   ],
   "sessions": {
-    "total": 59,
-    "unique": 59,
-    "active24h": 32,
-    "totalTokens": 3431967,
-    "active24hTokens": 2362109,
+    "total": 58,
+    "unique": 58,
+    "active24h": 31,
+    "totalTokens": 3462962,
+    "active24hTokens": 2352723,
     "recent": [
-      {
-        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
-        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0",
-        "model": "glm-5.3-flash",
-        "totalTokens": 37188,
-        "updatedAt": "26s ago"
-      },
-      {
-        "key": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:1836e5c6-233e-4e04-b08c-0a3915d14866",
-        "label": "agent:main:cron:f38e0365-7bbf-46fd-bab7-14d51a5d4df0:run:1836e5c6-233e-4e04-b08c-0a3915d14866",
-        "model": "glm-5.3-flash",
-        "totalTokens": 37188,
-        "updatedAt": "31s ago"
-      },
-      {
-        "key": "agent:main:main",
-        "label": "agent:main:main",
-        "model": "glm-5",
-        "totalTokens": 104350,
-        "updatedAt": "12m ago"
-      },
-      {
-        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
-        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb",
-        "model": "glm-5.3-flash",
-        "totalTokens": 53058,
-        "updatedAt": "56m ago"
-      },
-      {
-        "key": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:731fd614-f6df-4fe0-b8d8-1be23c34e32d",
-        "label": "agent:main:cron:f0362050-d109-45ca-971b-6cc9cfad90eb:run:731fd614-f6df-4fe0-b8d8-1be23c34e32d",
-        "model": "glm-5.1",
-        "totalTokens": 52170,
-        "updatedAt": "1h ago"
-      },
-      {
-        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
-        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc",
-        "model": "glm-5.3-flash",
-        "totalTokens": 90327,
-        "updatedAt": "2h ago"
-      },
-      {
-        "key": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:3fb03c0c-60c5-4099-bb08-77c4f9540455",
-        "label": "agent:main:cron:77a5bcc6-1342-4ff4-836a-f640973006dc:run:3fb03c0c-60c5-4099-bb08-77c4f9540455",
-        "model": "glm-5.3-flash",
-        "totalTokens": 90327,
-        "updatedAt": "2h ago"
-      },
       {
         "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
         "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e",
         "model": "glm-5.3-flash",
         "totalTokens": 78724,
-        "updatedAt": "2h ago"
+        "updatedAt": "4m ago"
       },
       {
-        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:0746f45c-91e4-439f-bfd3-1168b5cfc9df",
-        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:0746f45c-91e4-439f-bfd3-1168b5cfc9df",
+        "key": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:9b7efe08-3f72-4b99-a63d-d7d922512bea",
+        "label": "agent:main:cron:f7510f1f-9db8-46e7-8019-3c9a4858db2e:run:9b7efe08-3f72-4b99-a63d-d7d922512bea",
         "model": "glm-5.3-flash",
-        "totalTokens": 77569,
-        "updatedAt": "3h ago"
+        "totalTokens": 78724,
+        "updatedAt": "4m ago"
+      },
+      {
+        "key": "agent:main:main",
+        "label": "agent:main:main",
+        "model": "glm-5",
+        "totalTokens": 113146,
+        "updatedAt": "16m ago"
       },
       {
         "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c",
         "model": "glm-5.1",
-        "totalTokens": 120676,
-        "updatedAt": "4h ago"
+        "totalTokens": 95062,
+        "updatedAt": "1h ago"
       },
       {
-        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:71ced6dd-a831-48e2-bc7c-ef2f410c2e45",
-        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:71ced6dd-a831-48e2-bc7c-ef2f410c2e45",
+        "key": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:236a56bf-ceb2-47bb-8a20-6463d50c8c7e",
+        "label": "agent:main:cron:1ea6e3b0-4744-4b45-871a-cdd1fcbef48c:run:236a56bf-ceb2-47bb-8a20-6463d50c8c7e",
         "model": "glm-5.1",
-        "totalTokens": 120676,
-        "updatedAt": "4h ago"
+        "totalTokens": 95062,
+        "updatedAt": "1h ago"
       },
       {
         "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
         "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c",
         "model": "glm-5.3-flash",
-        "totalTokens": 118501,
-        "updatedAt": "4h ago"
+        "totalTokens": 119299,
+        "updatedAt": "1h ago"
+      },
+      {
+        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:0bf6a49f-4685-46c4-ab96-12d9c63c966d",
+        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:0bf6a49f-4685-46c4-ab96-12d9c63c966d",
+        "model": "glm-5.3-flash",
+        "totalTokens": 117732,
+        "updatedAt": "2h ago"
       },
       {
         "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
         "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544",
         "model": "glm-5.3-flash",
-        "totalTokens": 89983,
-        "updatedAt": "4h ago"
+        "totalTokens": 77722,
+        "updatedAt": "2h ago"
       },
       {
-        "key": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:a5216e54-09ec-4b55-84f3-589406132046",
-        "label": "agent:main:cron:b0fd7e8d-f946-4228-bb85-1baaa3502c7c:run:a5216e54-09ec-4b55-84f3-589406132046",
+        "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:0ffcdba6-14fc-40c6-9453-1a475e6313ae",
+        "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:0ffcdba6-14fc-40c6-9453-1a475e6313ae",
         "model": "glm-5.3-flash",
-        "totalTokens": 115963,
-        "updatedAt": "5h ago"
-      },
-      {
-        "key": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:a0ffc4b9-4f01-49c4-a24c-83a8268da82e",
-        "label": "agent:main:cron:88679f9e-ba09-4e1a-8dbd-a2dc12808544:run:a0ffc4b9-4f01-49c4-a24c-83a8268da82e",
-        "model": "glm-5.3-flash",
-        "totalTokens": 108488,
-        "updatedAt": "5h ago"
+        "totalTokens": 75880,
+        "updatedAt": "3h ago"
       },
       {
         "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab",
         "model": "glm-5.3-flash",
-        "totalTokens": 91103,
-        "updatedAt": "5h ago"
+        "totalTokens": 106706,
+        "updatedAt": "3h ago"
       },
       {
-        "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:04a15ba9-c501-4059-bc0f-d5f340618878",
-        "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:04a15ba9-c501-4059-bc0f-d5f340618878",
+        "key": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:bd056bd6-d791-4f54-898d-0fb53d75d54e",
+        "label": "agent:main:cron:78eac6fc-c2d7-41d2-a5d1-9a52892f89ab:run:bd056bd6-d791-4f54-898d-0fb53d75d54e",
         "model": "glm-5.3-flash",
-        "totalTokens": 116648,
-        "updatedAt": "6h ago"
+        "totalTokens": 105356,
+        "updatedAt": "4h ago"
       },
       {
         "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781",
         "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781",
-        "model": "glm-5.3-flash",
-        "totalTokens": 69117,
-        "updatedAt": "7h ago"
+        "model": "glm-5.1",
+        "totalTokens": 58533,
+        "updatedAt": "4h ago"
       },
       {
-        "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:72e20d01-423a-44b6-a7ca-e2edba92becb",
-        "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:72e20d01-423a-44b6-a7ca-e2edba92becb",
+        "key": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:5b75cd1f-f86a-418e-b16e-cd14909da934",
+        "label": "agent:main:cron:84707ade-1c71-4b06-af17-05e62a021781:run:5b75cd1f-f86a-418e-b16e-cd14909da934",
         "model": "glm-5.1",
-        "totalTokens": 51867,
-        "updatedAt": "7h ago"
+        "totalTokens": 58533,
+        "updatedAt": "4h ago"
       },
       {
         "key": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
         "label": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19",
         "model": "glm-5.3-flash",
-        "totalTokens": 59771,
+        "totalTokens": 75841,
+        "updatedAt": "4h ago"
+      },
+      {
+        "key": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19:run:4f82c92e-2259-4742-bcf3-7c3154f9a07b",
+        "label": "agent:main:cron:62bf7f3b-862d-45b9-86b7-f3d9fcc1ea19:run:4f82c92e-2259-4742-bcf3-7c3154f9a07b",
+        "model": "glm-5.1",
+        "totalTokens": 74651,
+        "updatedAt": "5h ago"
+      },
+      {
+        "key": "agent:main:cron:13a2f284-a1ed-4394-979a-5392fbdf50f7",
+        "label": "agent:main:cron:13a2f284-a1ed-4394-979a-5392fbdf50f7",
+        "model": "glm-5.3-flash",
+        "totalTokens": 129850,
+        "updatedAt": "6h ago"
+      },
+      {
+        "key": "agent:main:cron:13a2f284-a1ed-4394-979a-5392fbdf50f7:run:2787575e-eab3-4e6b-bab4-f9195e95754d",
+        "label": "agent:main:cron:13a2f284-a1ed-4394-979a-5392fbdf50f7:run:2787575e-eab3-4e6b-bab4-f9195e95754d",
+        "model": "glm-5.3-flash",
+        "totalTokens": 129850,
+        "updatedAt": "6h ago"
+      },
+      {
+        "key": "agent:main:cron:a4bf5e2a-a7ba-4e00-a8a5-fb3b03d6fd66",
+        "label": "agent:main:cron:a4bf5e2a-a7ba-4e00-a8a5-fb3b03d6fd66",
+        "model": "glm-5.1",
+        "totalTokens": 71467,
         "updatedAt": "7h ago"
+      },
+      {
+        "key": "agent:main:cron:a4bf5e2a-a7ba-4e00-a8a5-fb3b03d6fd66:run:be3db325-8226-4d0f-a5e9-8380df572fe5",
+        "label": "agent:main:cron:a4bf5e2a-a7ba-4e00-a8a5-fb3b03d6fd66:run:be3db325-8226-4d0f-a5e9-8380df572fe5",
+        "model": "glm-5.1",
+        "totalTokens": 71467,
+        "updatedAt": "7h ago"
+      },
+      {
+        "key": "agent:main:cron:ad37c59a-6265-4e29-b372-71788835afbf",
+        "label": "agent:main:cron:ad37c59a-6265-4e29-b372-71788835afbf",
+        "model": "glm-5.3-flash",
+        "totalTokens": 52592,
+        "updatedAt": "8h ago"
       }
     ]
   },
   "git": {
     "repo": "robertsong2019/openclaw-workspace",
-    "lastCommit": "bed7133 memory: 2026-09-22 04:00 doc cycle record (C594-C596 追平, c08d8dd)",
+    "lastCommit": "9e34ce5 C599 tsv row + kd-3 memory: march-window anchored counting keep (banked 351->353, 35th consecutive keep)",
     "recentCommits": [
-      "bed7133 memory: 2026-09-22 04:00 doc cycle record (C594-C596 追平, c08d8dd)",
-      "c08d8dd doc: amg C594-C596 追平 — badge 10909→10971, README Cycles 594-596 三面 (furniture_txn/bikes_own/marvel_rewatch), TUTORIAL-ANSWER-FACES §5.45-47 + 原则 19 条",
-      "8d34559 memory: 2026-09-22 03:00 project-testing cycle — afm pid-injection gate (29→32, 3 reds)",
-      "294c7b0 amf→afm 3AM cycle tsv row: pid-injection gate + 2 silent-corruption fixes (29→32, 3 reds)",
-      "e5d8c3c afm: pid-file shell-injection gate + listAgents corrupt-JSON skip + importFromEnv numeric validation (+3 tests, 3 red-verified)",
-      "f142fe3 memory: 2026-09-22 02:00 KO — C594-C596 kd 三连 (0.688→0.696, 10971, 32 keeps); atc R78 hash 收官 1921; ctxpack/ato/dep-guard 新入台账 (~24092); 09-20~21 旧节归档"
+      "9e34ce5 C599 tsv row + kd-3 memory: march-window anchored counting keep (banked 351->353, 35th consecutive keep)",
+      "64674a7 amg C599: march-window anchored counting faces — bike_service_march + march_appt (a9f6b44c/00ca467f)",
+      "ed94c2d C598 tsv row + kd-2 memory: cum_total keep (banked 349->351, 34th consecutive keep)",
+      "7d60bbb amg C598: cum_total face — self-stated cumulative activity totals (26bdc477/618f13b2)",
+      "7439c06 amg C597 tsv row: bake two-weeks count keep (banked 348->349, 33rd consecutive keep)",
+      "41a608e amg C597 kd-1: bake two-weeks counting face (88432d0a)"
     ]
   }
 }
