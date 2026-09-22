@@ -121,6 +121,18 @@ class TestParseCronJobs(unittest.TestCase):
         jobs = parse_cron_jobs(HEADER + "\n" + ROW_JUNK + "\n" + ROW_CRON)
         self.assertEqual(len(jobs), 1)
 
+    def test_extra_column_row_best_effort_kept(self):
+        """8-col row (future schema growth) must not be silently dropped:
+        best-effort parse with the stable 7-col positions (silent row drop
+        family, cf. every-type row fix)."""
+        row = ROW_CRON + "  bonus-col"
+        jobs = parse_cron_jobs(HEADER + "\n" + row)
+        self.assertEqual(len(jobs), 1)
+        self.assertEqual(jobs[0]["id"], "f7510f1f")
+        self.assertEqual(jobs[0]["schedule"], "0 3 * * * (exact)")
+        self.assertEqual(jobs[0]["lastRun"], "1d ago")
+        self.assertEqual(jobs[0]["status"], "running")
+
     def test_status_counts_derivable(self):
         out = "\n".join([ROW_CRON, ROW_GLUED, ROW_TZ, ROW_EVERY])
         jobs = parse_cron_jobs(out)
@@ -184,6 +196,17 @@ class TestParseMeminfo(unittest.TestCase):
 
     def test_zero_value_line(self):
         self.assertEqual(parse_meminfo(self.FIXTURE)["HugePages_Total"], 0)
+
+    def test_junk_lines_skipped(self):
+        """Parser contract mirrors parse_cron_jobs: junk rows are skipped,
+        never crash (ROW_JUNK sibling behavior)."""
+        text = ("\n"                       # empty line
+                "no colon here\n"           # unparseable
+                "MemTotal:  100 kB\n"
+                "EmptyVal:\n"               # colon but no value
+                "NotNumber:  abc kB\n")     # non-numeric value
+        mem = parse_meminfo(text)
+        self.assertEqual(mem, {"MemTotal": 100})
 
     def test_mb_math_contract(self):
         """main() derives usedMB = (MemTotal - MemAvailable) // 1024."""
@@ -340,6 +363,21 @@ class TestMainIntegration(unittest.TestCase):
         self.assertEqual(disk["usage"], "31%")
         self.assertEqual(disk["available"], "28G")
         self.assertEqual(host["loadAverage"], "0.52, 0.58, 0.59")
+
+    def test_null_updatedat_does_not_crash_and_counts_stale(self):
+        """sessions.json entry with updatedAt:null must not crash the sort
+        (model field is or-guarded; updatedAt must be too)."""
+        cron_out = HEADER
+        store = self._store(
+            ("fresh", "glm", 5, NOW_MS_FIXED),
+            ("null-ts", "glm", 10, None),
+        )
+        data = self.run_main(cron_out, store)
+        s = data["sessions"]
+        self.assertEqual(s["total"], 2)
+        self.assertEqual(s["active24h"], 1)   # null-ts treated as epoch → stale
+        self.assertEqual(s["totalTokens"], 15)
+        self.assertEqual(s["recent"][-1]["key"], "null-ts")  # sorts last
 
     def test_recent_capped_at_20(self):
         cron_out = HEADER

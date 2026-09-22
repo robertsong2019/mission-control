@@ -30,7 +30,9 @@ def parse_cron_jobs(cron_out):
         jid = jid_full[:8]
         name = KNOWN_NAMES.get(jid, raw_name)
         rc = [c.strip() for c in re.split(r'\s{2,}', rest) if c.strip()]
-        if len(rc) == 7:      # sched, next, last, status, target, agent, model
+        if len(rc) >= 7:      # sched, next, last, status, target, agent, model
+            # (extra trailing columns from future schema growth: best-effort
+            # parse at the stable positions instead of silently dropping)
             sched, last, status = rc[0], rc[2], rc[3]
         elif len(rc) == 6:    # sched+next glued (truncated sched), last, status, target, agent, model
             sched, last, status = re.sub(r'\s+in \S+$', '', rc[0]), rc[1], rc[2]
@@ -54,11 +56,19 @@ def ago(ms, now_ms=None):
     return f"{int(d//86400)}d ago"
 
 def parse_meminfo(text):
-    """Parse /proc/meminfo into {key: value_in_kB}."""
+    """Parse /proc/meminfo into {key: value_in_kB}; unparseable lines skipped."""
     mem = {}
     for line in text.splitlines():
-        k, v = line.split(":")
-        mem[k] = int(v.strip().split()[0])  # kB
+        if ":" not in line:
+            continue
+        k, v = line.split(":", 1)
+        parts = v.strip().split()
+        if not parts:
+            continue
+        try:
+            mem[k] = int(parts[0])  # kB
+        except ValueError:
+            continue
     return mem
 
 # ---------- main ----------
@@ -79,7 +89,7 @@ def main():
             "key": key,
             "model": v.get("model") or v.get("modelOverride") or "unknown",
             "totalTokens": v.get("totalTokens") or 0,
-            "updatedAtMs": v.get("updatedAt", 0),
+            "updatedAtMs": v.get("updatedAt") or 0,
         })
     sessions.sort(key=lambda s: -s["updatedAtMs"])
     active24 = [s for s in sessions if NOW_MS - s["updatedAtMs"] <= 24 * 3600 * 1000]
