@@ -1,0 +1,2 @@
+timestamp	commit	metric	value	status	description
+2026-09-25T21:05	27e7a5a	test_pass_rate	100% (45/45)	keep	other-bucket partition + non-dict session guard; baseline 36/36
