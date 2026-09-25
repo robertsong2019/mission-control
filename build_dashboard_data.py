@@ -79,12 +79,18 @@ def main():
     ok_n = sum(1 for j in cron_jobs if j["status"] == "ok")
     err_n = sum(1 for j in cron_jobs if j["status"] == "error")
     run_n = sum(1 for j in cron_jobs if j["status"] == "running")
+    # non-standard statuses (e.g. paused) must still be accounted for so the
+    # buckets partition total instead of silently vanishing jobs
+    other_jobs = [f'{j["id"]} ({j["name"]})' for j in cron_jobs
+                  if j["status"] not in ("ok", "error", "running")]
     err_jobs = [f'{j["id"]} ({j["name"]})' for j in cron_jobs if j["status"] == "error"]
 
     # ---------- sessions ----------
     store = json.load(open('/root/.openclaw/agents/main/sessions/sessions.json'))
     sessions = []
     for key, v in store.items():
+        if not isinstance(v, dict):
+            continue  # corrupt entry: skip rather than crash the build
         sessions.append({
             "key": key,
             "model": v.get("model") or v.get("modelOverride") or "unknown",
@@ -150,7 +156,8 @@ def main():
         },
         "cronSummary": {
             "total": len(cron_jobs), "ok": ok_n, "error": err_n,
-            "running": run_n, "errorJobs": err_jobs
+            "running": run_n, "errorJobs": err_jobs,
+            "other": len(other_jobs), "otherJobs": other_jobs
         },
         "cronJobs": cron_jobs,
         "sessions": {
@@ -173,7 +180,7 @@ def main():
     with open(out, "w") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
     print(f"written {out}")
-    print(f"cron: {ok_n} ok / {err_n} error / {run_n} running / {len(cron_jobs)} total; errors: {err_jobs}")
+    print(f"cron: {ok_n} ok / {err_n} error / {run_n} running / {len(other_jobs)} other / {len(cron_jobs)} total; errors: {err_jobs}")
     print(f"sessions: {len(sessions)} total, {len(active24)} active-24h, tokens all={total_tokens_all}, 24h={total_tokens_24h}")
 
 if __name__ == "__main__":

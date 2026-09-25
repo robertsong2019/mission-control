@@ -44,6 +44,11 @@ ROW_AT = ("aaaa2222-2222-2222-2222-222222222222 one-shot-task"
           "  at 2026-09-10T08:00  in 5h       1m ago     ok"
           "        isolated  -          -")
 
+# 7-col row with non-standard status (paused) -> must land in `other` bucket
+ROW_PAUSED = ("dddd5555-5555-5555-5555-555555555555 paused-job"
+              "  cron 0 12 * * *                 in 3h       2d ago"
+              "     paused    isolated  -          -")
+
 # well-formed id but unparseable columns -> skipped
 ROW_JUNK = ("bbbb3333-3333-3333-3333-333333333333 weird-row"
             "  cron */5 * * *")
@@ -401,6 +406,47 @@ class TestMainIntegration(unittest.TestCase):
         self.assertEqual(data["cronSummary"]["total"], 1)
         self.assertRegex(data["lastUpdated"], r"^\d{4}-\d{2}-\d{2}T")
         self.assertRegex(data["generatedAt"], r"\d{4}-\d{2}-\d{2} \d{2}:\d{2} CST$")
+
+
+class TestSummaryBucketsPartition(TestMainIntegration):
+    """Contract: cronSummary buckets partition total
+    (ok+error+running+other == total); non-dict session entries are
+    skipped instead of crashing the build."""
+
+    def test_paused_status_lands_in_other_bucket(self):
+        cron_out = "\n".join([HEADER, ROW_CRON, ROW_PAUSED])
+        data = self.run_main(
+            cron_out, self._store(("s1", "m1", 1, NOW_MS_FIXED)))
+        cs = data["cronSummary"]
+        self.assertEqual(cs["total"], 2)
+        self.assertEqual(cs["running"], 1)
+        self.assertEqual(cs["other"], 1)
+        self.assertEqual(cs["otherJobs"], ["dddd5555 (paused-job)"])
+        # partition invariant
+        self.assertEqual(
+            cs["ok"] + cs["error"] + cs["running"] + cs["other"], cs["total"])
+
+    def test_all_ok_leaves_other_empty(self):
+        cron_out = "\n".join([HEADER, ROW_GLUED])
+        data = self.run_main(
+            cron_out, self._store(("s1", "m1", 1, NOW_MS_FIXED)))
+        cs = data["cronSummary"]
+        self.assertEqual(cs["other"], 0)
+        self.assertEqual(cs["otherJobs"], [])
+
+    def test_non_dict_session_entries_skipped_not_crash(self):
+        cron_out = HEADER
+        store = {
+            "good": {"model": "glm", "totalTokens": 7,
+                     "updatedAt": NOW_MS_FIXED},
+            "corrupt-str": "not-a-dict",
+            "corrupt-num": 42,
+        }
+        data = self.run_main(cron_out, store)
+        s = data["sessions"]
+        self.assertEqual(s["total"], 1)
+        self.assertEqual(s["totalTokens"], 7)
+        self.assertEqual(s["recent"][0]["key"], "good")
 
 
 if __name__ == "__main__":
